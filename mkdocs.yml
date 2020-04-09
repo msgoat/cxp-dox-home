@@ -1,0 +1,20 @@
+site_name: Automotive Academy Cloud Expert Program
+site_url: https://docs.at.automotive.msg.team/cxp
+site_description: Cloud Expert Program documentation
+copyright: msg systems ag Automotive Technology
+repo_url: https://github.com/msgoat/cxp-dox-home
+repo_name: cxp-dox-home
+nav:
+  - Home: index.md
+  - Virtualization:
+    - Virtual Machines: virtualization/virtual_machines.md
+    - Installing Hyper-V: virtualization/installing_hyperv.md
+markdown_extensions:
+  - footnotes
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: true
+  - toc:
+      permalink: true
+theme: material
