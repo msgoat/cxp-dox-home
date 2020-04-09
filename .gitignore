@@ -1,0 +1,49 @@
+# .gitignore
+# ----------------------------------------------------------------------------
+# .gitignore on repository scope, i.e. tells git which files to ignore
+# in all projects added to a repository
+# ----------------------------------------------------------------------------
+# @author Michael Theis
+# @version 1.0 2017-02-17
+# ----------------------------------------------------------------------------
+#
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files
+#
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+# Eclipse IDE metadata files
+.project
+.classpath
+.settings/
+.apt_generated/
+.deployables
+.factorypath
+
+# IntelliJ IDE metadata files
+.idea/
+*.iml
+
+# MAVEN build artifacts
+**/target/
+**/.flattened-pom.xml
+
