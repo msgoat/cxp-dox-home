@@ -2,7 +2,8 @@
 
 ## Preface
 
-Before you start walking through this how-to I would like to confess that I am NOT a Linux expert. So if you diagree with the configuration options that I chose and which worked for me, please feel free to leave a comment - or, even better - fix this page right away. 
+!!! note "Contributions are welcome!"
+    Before you start walking through this how-to I would like to confess that I am NOT a Linux expert. So if you diagree with the configuration options that I chose and which worked for me, please feel free to leave a comment - or, even better - fix this page right away. 
 
 ## Install CentOS 8 using the graphic installer
 

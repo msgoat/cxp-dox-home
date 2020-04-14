@@ -22,3 +22,4 @@ nav:
       - Introduction: linux/index.md
       - Creating CentOS8 VM on Hyper-V: linux/centos8_create_vm_hyperv.md
       - Installing CentOS8: linux/centos8_install.md
+      - Setting up CentOS8 : linux/centos8_setup.md
