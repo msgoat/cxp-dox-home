@@ -23,3 +23,10 @@ nav:
       - Creating CentOS8 VM on Hyper-V: linux/centos8_create_vm_hyperv.md
       - Installing CentOS8: linux/centos8_install.md
       - Setting up CentOS8 : linux/centos8_setup.md
+  - AWS:
+      - Introduction: aws/index.md
+      - AWS Accounts: aws/aws_accounts.md
+      - AWS Users:
+          - User Account Basics: aws/iam/aws_users.md
+          - Setting up a Console User Account: aws/iam/aws_console_user_setup.md
+          - Setting up a Programmatic User Account: aws/iam/aws_programmatic_user_setup.md
