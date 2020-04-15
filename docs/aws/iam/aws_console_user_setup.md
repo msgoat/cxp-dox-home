@@ -22,7 +22,18 @@ Before you continue, please make sure you have the following information:
 
 3\. Enter your __Old password__ and enter and confirm your new password. Press __Confirm password change__ to move to AWS start page:
 
+![](img/aws_sign-in_2.png)
 
+## Setup a MFA device
+
+By default, you are not allowed to do anything in AWS console without setting up MFA first.
+
+There's a excellent article about MFA setup in the offical AWS documentation: [Enabling a Virtual Multi-factor Authentication (MFA) Device (Console)](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_mfa_enable_virtual.html).
+Simply follow all instructions on section __Enable a Virtual MFA Device for an IAM User (Console)__.
+
+!!! tip "Recommended MFA Apps for Android and iOS"
+    The [Multi-factor Authentication](https://aws.amazon.com/iam/features/mfa/?audit=2019q1) page contains a list of 
+    all supported MFA applications for mobile phones. Recommended ones are: __Microsoft Authenticator__ or __Google Authenticator__.
 
  
 
