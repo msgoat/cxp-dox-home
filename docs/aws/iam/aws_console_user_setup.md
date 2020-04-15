@@ -20,6 +20,9 @@ Before you continue, please make sure you have the following information:
 
 ![](img/aws_sign-in_1.png)
 
+!!! caution "New Password must match Password Policies"
+    Check out the [Password Policies](aws_users.md#password-policies) which your new password will have to match!
+    
 3\. Enter your __Old password__ and enter and confirm your new password. Press __Confirm password change__ to move to AWS start page:
 
 ![](img/aws_sign-in_2.png)
