@@ -6,7 +6,7 @@
 
 Although you will be able to install VirtualBox while Hyper-V is activated, you will not be able to run VMs with VirtualBox (well VirtualBox is supposed to have Hyper-V support since version 6 but only with serious problems).
 
-See [Uninstalling Hyper-V using Powershell](installing_hyperv.md) for instructions to deactivate Hyper-V.
+See [Uninstalling Hyper-V using Powershell](hyperv_install.md) for instructions to deactivate Hyper-V.
 
 ## Install VirtualBox using the installer
 

@@ -18,7 +18,8 @@ nav:
   - Home: index.md
   - Virtualization:
       - Virtual Machines: virtualization/virtual_machines.md
-      - Installing Hyper-V: virtualization/installing_hyperv.md
+      - Installing Hyper-V: virtualization/hyperv_install.md
+      - Installing VirtualBox: virtualization/vbox_install.md
   - Linux:
       - Introduction: linux/index.md
       - Creating CentOS8 VM on Hyper-V: linux/centos8_create_vm_hyperv.md
