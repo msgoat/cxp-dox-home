@@ -25,6 +25,8 @@ nav:
       - Creating CentOS8 VM on Hyper-V: linux/centos8_create_vm_hyperv.md
       - Installing CentOS8: linux/centos8_install.md
       - Setting up CentOS8 : linux/centos8_setup.md
+      - Adding a new Block Device to CentOS8 : linux/centos8_add_volume.md
+      - Growing an existing Block Device on CentOS8 : linux/centos8_grow_volume.md
   - AWS:
       - Introduction: aws/index.md
       - AWS Accounts: aws/aws_accounts.md
@@ -34,9 +36,13 @@ nav:
           - Setting up a Programmatic User Account: aws/iam/aws_programmatic_user_setup.md
       - AWS Virtual Machines (EC2):
           - Creating an EC2 instance: aws/ec2/ec2_create_instance.md
+      - AWS Block Storage (EBS):
+          - Creating an EBS volume: aws/ebs/ebs_create_volume.md
+          - Resizing an EBS volume: aws/ebs/ebs_resize_volume.md
   - SSH:
       - SSH Primer: ssh/ssh_primer.md
       - Connecting to Linux VMs: ssh/ssh_connect_to_vms.md
       - PuTTY Primer: ssh/putty_primer.md
       - Managing Connections with PuTTY: ssh/putty_managing_connections.md
       - Managing SSH Keys with PuTTY: ssh/putty_managing_ssh_keys.md
+      - Creating SSH Keys with ssh-keygen: ssh/ssh_create_ssh_keys.md
