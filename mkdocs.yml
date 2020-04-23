@@ -25,6 +25,7 @@ nav:
       - Creating CentOS8 VM on Hyper-V: linux/centos8_create_vm_hyperv.md
       - Installing CentOS8: linux/centos8_install.md
       - Setting up CentOS8 : linux/centos8_setup.md
+      - Linux Storage Basics : linux/linux_storage_basics.md
       - Adding a new Block Device to CentOS8 : linux/centos8_add_volume.md
       - Growing an existing Block Device on CentOS8 : linux/centos8_grow_volume.md
   - AWS:
