@@ -21,15 +21,20 @@ nav:
       - Installing Hyper-V: virtualization/hyperv_install.md
       - Installing VirtualBox: virtualization/vbox_install.md
   - Linux:
-      - Introduction: linux/index.md
+      - Linux Introduction: linux/index.md
       - Creating CentOS8 VM on Hyper-V: linux/centos8_create_vm_hyperv.md
       - Installing CentOS8: linux/centos8_install.md
       - Setting up CentOS8 : linux/centos8_setup.md
       - Linux Storage Basics : linux/linux_storage_basics.md
       - Adding a new Block Device to CentOS8 : linux/centos8_add_volume.md
       - Growing an existing Block Device on CentOS8 : linux/centos8_grow_volume.md
+  - Docker:
+      - Docker Introduction: docker/index.md
+      - Getting Started with Docker: docker/docker_introduction.md
+      - Docker vs Virtual Machines: docker/docker_vs_virtual_machines.md
+      - From Dockerfile to Docker Container: docker/docker_dockerfile_2_container.md
   - AWS:
-      - Introduction: aws/index.md
+      - AWS Introduction: aws/index.md
       - AWS Accounts: aws/aws_accounts.md
       - AWS Users:
           - User Account Basics: aws/iam/aws_users.md
