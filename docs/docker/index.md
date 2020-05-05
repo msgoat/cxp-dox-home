@@ -11,14 +11,17 @@ here's the suggested path through the Docker documentation section:
 
 * [Docker vs Virtual Machines](docker_vs_virtual_machines.md) compares Docker technology to "old-school" virtualization with virtual machines.
 
+* How Docker works (assignment)
+
 * [From Dockerfile to a running Docker Container](docker_dockerfile_2_container.md) introduces you to Docker terminology 
 in general and to the development process from a Dockerfile to a running Docker container in particular.
 
-* Docker Container Storage
+* [Docker Container Storage](docker_storage.md) tells you how you can add persistent storage to your Docker container.
 
-* Docker Alternatives
+* Docker Alternatives (assignment)
 
-* Composing Docker Containers with Docker Compose
+* [Composing Docker Containers with Docker Compose](docker-compose.md) introduces you to `docker-compose` which helps 
+you to manage all containers to start, all volumes to map and all containers to link in a single YAML file.
 
 * Writing Dockerfiles
 
