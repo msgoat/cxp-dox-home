@@ -16,24 +16,15 @@ here's the suggested path through the Docker documentation section:
 * [From Dockerfile to a running Docker Container](docker_dockerfile_2_container.md) introduces you to Docker terminology 
 in general and to the development process from a Dockerfile to a running Docker container in particular.
 
+* [From Dockerfile to a running Docker Container (Walkthrough)](docker_dockerfile_2_container_by_example.md) 
+walks you through the complete development process from a Dockerfile to a running Docker Container by a concrete example.
+
 * [Docker Container Storage](docker_storage.md) tells you how you can add persistent storage to your Docker container.
 
 * Docker Alternatives (assignment)
 
-* [Composing Docker Containers with Docker Compose](docker-compose.md) introduces you to `docker-compose` which helps 
+* [Composing Docker Containers with Docker Compose](docker_compose.md) introduces you to `docker-compose` which helps 
 you to manage all containers to start, all volumes to map and all containers to link in a single YAML file.
-
-* Writing Dockerfiles
-
-* Building Docker Images
-
-* Versioning Docker Images with Tags 
-
-* Pushing and Pulling Docker Images
-
-* Logging in to Docker Registries
-
-* Running Docker Containers
 
 * Installing Docker on Windows
 

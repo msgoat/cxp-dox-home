@@ -33,6 +33,7 @@ nav:
       - Getting Started with Docker: docker/docker_introduction.md
       - Docker vs Virtual Machines: docker/docker_vs_virtual_machines.md
       - From Dockerfile to Docker Container: docker/docker_dockerfile_2_container.md
+      - From Dockerfile to Docker Container (Walkthrough): docker/docker_dockerfile_2_container_by_example.md
       - Docker Container Storage: docker/docker_storage.md
       - Composing Docker Containers with Docker Compose: docker/docker_compose.md
   - AWS:
