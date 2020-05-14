@@ -38,6 +38,11 @@ nav:
       - Composing Docker Containers with Docker Compose: docker/docker_compose.md
       - Docker Best Practices: docker/docker_best_practices.md
       - Docker Runtime Scenarios: docker/docker_runtime_scenarios.md
+  - Kubernetes:
+      - Kubernetes Introduction: kubernetes/index.md
+      - Getting Started with Kubernetes: kubernetes/k8s_introduction.md
+      - Install kubectl: kubernetes/kubectl/kubectl_install.md
+      - Install minikube: kubernetes/minikube/minikube_install.md
   - AWS:
       - AWS Introduction: aws/index.md
       - AWS Accounts: aws/aws_accounts.md
