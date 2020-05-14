@@ -36,6 +36,8 @@ nav:
       - From Dockerfile to Docker Container (Walkthrough): docker/docker_dockerfile_2_container_by_example.md
       - Docker Container Storage: docker/docker_storage.md
       - Composing Docker Containers with Docker Compose: docker/docker_compose.md
+      - Docker Best Practices: docker/docker_best_practices.md
+      - Docker Runtime Scenarios: docker/docker_runtime_scenarios.md
   - AWS:
       - AWS Introduction: aws/index.md
       - AWS Accounts: aws/aws_accounts.md

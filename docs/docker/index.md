@@ -21,6 +21,10 @@ walks you through the complete development process from a Dockerfile to a runnin
 
 * [Docker Container Storage](docker_storage.md) tells you how you can add persistent storage to your Docker container.
 
+* [Docker Best Practices](docker_best_practices.md) provides you with important information about DO's and DON'Ts regarding Docker.
+
+* [Docker Runtime Scenarios](docker_runtime_scenarios.md) digs a little deeper into common and unusual scenarios for running Docker.
+
 * Docker Alternatives (assignment)
 
 * [Composing Docker Containers with Docker Compose](docker_compose.md) introduces you to `docker-compose` which helps 
