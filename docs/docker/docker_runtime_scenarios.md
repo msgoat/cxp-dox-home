@@ -50,7 +50,7 @@ the runner container, the command is executed by the outer daemon which creates 
 ## Running Docker in Docker using DinD
 
 There are runtime environments where sharing a common daemon is not possible: Kubernetes will not be happy if someone 
-creates new container on one of its worker nodes. For this type of scenario, dind (__d__ ocker __in__ __d__ ocker) is the right approach:
+creates new container on one of its worker nodes. For this type of scenario, `dind` (__d__ ocker __in__ __d__ ocker) is the right approach:
 
 ![](img/docker_in_docker_dind.png)
 
