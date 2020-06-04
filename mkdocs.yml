@@ -41,7 +41,11 @@ nav:
   - Kubernetes:
       - Kubernetes Introduction: kubernetes/index.md
       - Getting Started with Kubernetes: kubernetes/k8s_introduction.md
-      - Install kubectl: kubernetes/kubectl/kubectl_install.md
+      - Kubernetes CLI kubectl:
+          - Administrating Kubernetes clusters with kubectl: kubernetes/kubectl/kubectl_introduction.md
+          - Installing kubectl: kubernetes/kubectl/kubectl_install.md
+          - Setting up kubectl: kubernetes/kubectl/kubectl_setup.md
+          - kubectl commands: kubernetes/kubectl/kubectl_commands.md
       - Install minikube: kubernetes/minikube/minikube_install.md
   - AWS:
       - AWS Introduction: aws/index.md
