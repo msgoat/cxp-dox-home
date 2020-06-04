@@ -41,6 +41,8 @@ nav:
   - Kubernetes:
       - Kubernetes Introduction: kubernetes/index.md
       - Getting Started with Kubernetes: kubernetes/k8s_introduction.md
+      - Moving Parts of a Kubernetes Cluster: kubernetes/k8s_clusters.md
+      - Kubernetes Basic Object Model: kubernetes/k8s_basic_objects.md
       - Kubernetes CLI kubectl:
           - Administrating Kubernetes clusters with kubectl: kubernetes/kubectl/kubectl_introduction.md
           - Installing kubectl: kubernetes/kubectl/kubectl_install.md
