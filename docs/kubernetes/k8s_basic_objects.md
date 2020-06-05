@@ -101,6 +101,34 @@ Network policies can define either ingress (inbound traffic) and/or egress (outb
 
 @see [NetworkPolicy Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#networkpolicy-v1-networking-k8s-io)
 
+__Example: NetworkPolicy manifest__
+
+This manifest file named `networkpolicy.yaml` creates a network policy which denies all inbound traffic to any pod running in the same namespace.
+
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: default-deny-inbound
+  labels:
+    app.kubernetes.io/name: default-deny-inbound
+    app.kubernetes.io/component: network
+    app.kubernetes.io/part-of: cxp
+    app.kubernetes.io/managed-by: kubectl
+spec:
+  podSelector: {}
+  policyTypes:
+    - Ingress
+```
+
+This network policy can be created by running kubectl:
+
+```shell
+kubectl -n ${namespaceName} create -f networkpolicy.yaml
+```
+
+Remember to specify a proper namespace name; otherwise this network policy will be created in namespace __default__.
+
 ### Namespace
 
 A `namespace` subdivides a physical Kubernetes cluster into virtual isolated sub-clusters. Thus, namespaces
@@ -141,6 +169,30 @@ Application groups representing system tool stacks for monitoring, logging and t
 @see [Namespaces](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
 
 @see [Namespace Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#namespace-v1-core)
+
+__Example: Namespace manifest__
+
+This manifest file named `namespace.yaml` creates a namespace.
+
+```yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ${namespaceName}
+  labels:
+    app.kubernetes.io/name: ${namespaceName}
+    app.kubernetes.io/component: network
+    app.kubernetes.io/part-of: cxp
+    app.kubernetes.io/managed-by: kubectl
+```
+
+Remember to replace __${namespaceName}__ with a proper name!
+
+This namespace can be created by running kubectl:
+
+```shell
+kubectl create -f namespace.yaml
+```
 
 ## Core objects for stateful applications
 
