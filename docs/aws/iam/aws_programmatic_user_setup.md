@@ -142,7 +142,7 @@ If you don't want to add the command line parameter __--profile__ to each AWS CL
 __AWS_PROFILE__ to the name of the profile you would like to use.
 
 ```
-SETX AWS_PROFILE=msgcxp
+SETX AWS_PROFILE msgcxp
 ```
 
 ## References
