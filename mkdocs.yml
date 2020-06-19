@@ -43,12 +43,21 @@ nav:
       - Getting Started with Kubernetes: kubernetes/k8s_introduction.md
       - Moving Parts of a Kubernetes Cluster: kubernetes/k8s_clusters.md
       - Kubernetes Basic Object Model: kubernetes/k8s_basic_objects.md
+      - Batch processing on Kubernetes: kubernetes/k8s_batch_processing.md
+      - Highly available applications with Kubernetes: kubernetes/k8s_pod_availability.md
+      - Enforcing Pod Security on Kubernetes: kubernetes/k8s_pod_security.md
+      - Role Based Access Control (RBAC) on Kubernetes: kubernetes/k8s_rbac.md
       - Kubernetes CLI kubectl:
           - Administrating Kubernetes clusters with kubectl: kubernetes/kubectl/kubectl_introduction.md
           - Installing kubectl: kubernetes/kubectl/kubectl_install.md
           - Setting up kubectl: kubernetes/kubectl/kubectl_setup.md
           - kubectl commands: kubernetes/kubectl/kubectl_commands.md
       - Install minikube: kubernetes/minikube/minikube_install.md
+  - Helm:
+      - Helm Introduction: helm/index.md
+      - Moving Parts of Helm: helm/helm_moving_parts.md
+      - Installing Helm: helm/helm_install.md
+      - Helm Commands: helm/helm_commands.md
   - AWS:
       - AWS Introduction: aws/index.md
       - AWS Accounts: aws/aws_accounts.md
