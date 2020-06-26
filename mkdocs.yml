@@ -47,6 +47,7 @@ nav:
       - Highly available applications with Kubernetes: kubernetes/k8s_pod_availability.md
       - Enforcing Pod Security on Kubernetes: kubernetes/k8s_pod_security.md
       - Role Based Access Control (RBAC) on Kubernetes: kubernetes/k8s_rbac.md
+      - Configuring Applications on Kubernetes: kubernetes/k8s_configuring_applications.md
       - Kubernetes CLI kubectl:
           - Administrating Kubernetes clusters with kubectl: kubernetes/kubectl/kubectl_introduction.md
           - Installing kubectl: kubernetes/kubectl/kubectl_install.md
@@ -58,6 +59,8 @@ nav:
       - Moving Parts of Helm: helm/helm_moving_parts.md
       - Installing Helm: helm/helm_install.md
       - Helm Commands: helm/helm_commands.md
+      - Managing Releases: helm/helm_managing_releases.md
+      - Reusing Charts: helm/helm_reusing_charts.md
   - AWS:
       - AWS Introduction: aws/index.md
       - AWS Accounts: aws/aws_accounts.md

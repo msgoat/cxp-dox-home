@@ -8,6 +8,14 @@
 
 These are the essential resources you need to know when you want to run applications on Kubernetes.
 
+The minimum set of Kubernetes resources or objects you have to create in order to deploy a stateless application includes:
+
+* 1 [deployment](#deployment) which will manage the [pods](#pod) and the [replica set](#replicaset) for you.
+* 1 [service](#service) which will expose your application within the cluster
+* 1 [ingress](#ingress) which will expose your application outside the cluster
+* 1 [network policy](#networkpolicy) which will allow inbound traffic to your application's [pods](#pod) 
+(if your cluster blocks all inbound traffic by default)
+
 ### Pod
 
 A `pod` can be regarded as the executable unit which Kubernetes runs.
@@ -81,6 +89,10 @@ which gets added to the routers routing table.
 Each ingress must refer to a [service](#service). 
 Ingresses support host-based or path-based routing, path manipulation, redirects, SSL certificates for HTTPS etc.  
 
+!!! tip "Ingress Controller on CPX Kubernetes cluster is Traefik" 
+    On the CXP Kubernetes cluster, Traefik is installed as the default ingress controller.
+    Please remember to add the Traefik specific annotations to your ingress manifest.
+    
 @see [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)
 
 @see [Ingress Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#ingress-v1beta1-networking-k8s-io)
@@ -97,9 +109,18 @@ Network policies can define either ingress (inbound traffic) and/or egress (outb
     denies any inbound and outbound traffic. So keep in mind to add a network policy manifest to each of your
     deployments, which explicitly allows specific traffic on specific ports / protocols with specific sources / destinations.
 
+!!! danger "Deleting network policies on AWS EKS does not deactivate them"
+    In our CXP scenario, each namespace has a default network policy `default-deny-inbound` which blocks all inbound traffic to any pod
+    in the namespace. In order to make your application available you will have to add a custom network policy which
+    allows inbound traffic to your application's pods. If you delete this custom network policy, your application pods
+    are still accessible. Only a redeployment of your application will make the deletion of the custom network policy
+    actually effective.
+     
 @see [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
 
 @see [NetworkPolicy Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#networkpolicy-v1-networking-k8s-io)
+
+@see [Network Policy Recipies](https://github.com/ahmetb/kubernetes-network-policy-recipes)
 
 __Example: NetworkPolicy manifest__
 

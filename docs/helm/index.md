@@ -11,6 +11,10 @@ Here's short list of key features which Helm provides:
 * Deployments are managed through charts which can be shared via chart repositories
 * Charts are composable with subcharts
 
+!!! info "This documentation is based on Helm v3"
+    The `Helm` section of this documentation is based on Helm version 3. If you are still using Helm version 2, 
+    please check the official Helm documentation site. 
+    
 ## References
 
 | Link | Description |
