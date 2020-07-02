@@ -5,11 +5,11 @@ constantly observe workload running on a Kubernetes or OpenShift cluster.
 
 A typical set of cluster tool stacks includes:
 
-* [Ingress Stack](ingress.md): ingress controller to expose services externally with Traefik
-* [Logging Stack](logging.md): cluster logging with Elasticsearch, Fluent Bit (or Logstash) and Kibana
-* [Monitoring Stack](monitoring.md): cluster monitoring with Prometheus and Grafana
-* [Tracing Stack](tracing.md): cluster end-to-end tracing with Jaeger
-* [IAM Stack](iam.md): Identity und Access Management with KeyCloak
+* [Ingress Stack](ingress/ingress_index.md): ingress controller to expose services externally with Traefik
+* [Logging Stack](logging/logging_index.md): cluster logging with Elasticsearch, Fluent Bit (or Logstash) and Kibana
+* [Monitoring Stack](monitoring/monitoring_index.md): cluster monitoring with Prometheus and Grafana
+* [Tracing Stack](tracing/tracing_index.md): cluster end-to-end tracing with Jaeger
+* [IAM Stack](iam/iam_index.md): Identity und Access Management with KeyCloak
 
 The first four stacks - Ingress, Logging, Monitoring and Tracing - are mandatory, the fifth one - IAM - is strictly optional.
 Please keep in mind, that you don't need to run all these stacks on your own cluster: In an enterprise scenario it is

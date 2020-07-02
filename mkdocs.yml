@@ -63,11 +63,21 @@ nav:
       - Reusing Charts: helm/helm_reusing_charts.md
   - Cluster Tool Stacks:
       - Introducing Tool Stacks: toolstacks/index.md
-      - Cluster Ingress Controller: toolstacks/ingress.md
-      - Cluster Logging: toolstacks/logging.md
-      - Cluster Monitoring: toolstacks/monitoring.md
-      - Cluster Tracing: toolstacks/tracing.md
-      - Cluster Identity&Access Management: toolstacks/iam.md
+      - Cluster Ingress Controller: toolstacks/ingress/ingress_index.md
+      - Cluster Logging:
+        - Introduction: toolstacks/logging/logging_index.md
+        - Best Practices: toolstacks/logging/logging_best_practices.md
+      - Cluster Monitoring:
+        - Introduction: toolstacks/monitoring/monitoring_index.md
+        - Metrics Catalog: toolstacks/monitoring/monitoring_metrics.md
+        - Prometheus Metric Types: toolstacks/monitoring/prometheus_metric_types.md
+        - Exposing Java Application to Prometheus: toolstacks/monitoring/monitoring_applications.md
+        - Best Practices: toolstacks/monitoring/monitoring_best_practices.md
+      - Cluster Tracing:
+          - Introduction: toolstacks/tracing/tracing_index.md
+          - Tracing Java Applications: toolstacks/tracing/tracing_applications.md
+          - Best Practices: toolstacks/tracing/tracing_best_practices.md
+      - Cluster Identity&Access Management: toolstacks/iam/iam_index.md
   - AWS:
       - AWS Introduction: aws/index.md
       - AWS Accounts: aws/aws_accounts.md
