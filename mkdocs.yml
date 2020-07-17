@@ -63,8 +63,8 @@ nav:
       - Reusing Charts: helm/helm_reusing_charts.md
   - Cluster Tool Stacks:
       - Introducing Tool Stacks: toolstacks/index.md
-      - Cluster Ingress Controller: toolstacks/ingress/ingress_index.md
-          - Introduction: toolstacks/logging/ingress_index.md
+      - Cluster Ingress Controller:
+          - Introduction: toolstacks/ingress/ingress_index.md
       - Cluster Logging:
           - Introduction: toolstacks/logging/logging_index.md
           - Best Practices: toolstacks/logging/logging_best_practices.md
