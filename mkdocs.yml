@@ -81,12 +81,15 @@ nav:
           - Best Practices: toolstacks/tracing/tracing_best_practices.md
       - Cluster Identity&Access Management: toolstacks/iam/iam_index.md
   - AWS:
-      - AWS Introduction: aws/index.md
+      - Introduction: aws/index.md
+      - Facts & Figures: aws/aws_facts_figures.md
       - AWS Accounts: aws/aws_accounts.md
       - AWS Users:
           - User Account Basics: aws/iam/aws_users.md
           - Setting up a Console User Account: aws/iam/aws_console_user_setup.md
           - Setting up a Programmatic User Account: aws/iam/aws_programmatic_user_setup.md
+      - AWS Virtual Private Cloud (VPC):
+          - VPC Basics: aws/vpc/vpc_basics.md
       - AWS Virtual Machines (EC2):
           - Creating an EC2 instance: aws/ec2/ec2_create_instance.md
       - AWS Block Storage (EBS):
