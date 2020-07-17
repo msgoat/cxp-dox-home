@@ -24,10 +24,10 @@ nav:
       - Linux Introduction: linux/index.md
       - Creating CentOS8 VM on Hyper-V: linux/centos8_create_vm_hyperv.md
       - Installing CentOS8: linux/centos8_install.md
-      - Setting up CentOS8 : linux/centos8_setup.md
-      - Linux Storage Basics : linux/linux_storage_basics.md
-      - Adding a new Block Device to CentOS8 : linux/centos8_add_volume.md
-      - Growing an existing Block Device on CentOS8 : linux/centos8_grow_volume.md
+      - Setting up CentOS8: linux/centos8_setup.md
+      - Linux Storage Basics: linux/linux_storage_basics.md
+      - Adding a new Block Device to CentOS8: linux/centos8_add_volume.md
+      - Growing an existing Block Device on CentOS8: linux/centos8_grow_volume.md
   - Docker:
       - Docker Introduction: docker/index.md
       - Getting Started with Docker: docker/docker_introduction.md
@@ -64,16 +64,17 @@ nav:
   - Cluster Tool Stacks:
       - Introducing Tool Stacks: toolstacks/index.md
       - Cluster Ingress Controller: toolstacks/ingress/ingress_index.md
+          - Introduction: toolstacks/logging/ingress_index.md
       - Cluster Logging:
-        - Introduction: toolstacks/logging/logging_index.md
-        - Best Practices: toolstacks/logging/logging_best_practices.md
-        - Kibana Features: toolstacks/logging/kibana_features.md
+          - Introduction: toolstacks/logging/logging_index.md
+          - Best Practices: toolstacks/logging/logging_best_practices.md
+          - Kibana Features: toolstacks/logging/kibana_features.md
       - Cluster Monitoring:
-        - Introduction: toolstacks/monitoring/monitoring_index.md
-        - Metrics Catalog: toolstacks/monitoring/monitoring_metrics.md
-        - Prometheus Metric Types: toolstacks/monitoring/prometheus_metric_types.md
-        - Exposing Java Application to Prometheus: toolstacks/monitoring/monitoring_applications.md
-        - Best Practices: toolstacks/monitoring/monitoring_best_practices.md
+          - Introduction: toolstacks/monitoring/monitoring_index.md
+          - Metrics Catalog: toolstacks/monitoring/monitoring_metrics.md
+          - Prometheus Metric Types: toolstacks/monitoring/prometheus_metric_types.md
+          - Exposing Java Application to Prometheus: toolstacks/monitoring/monitoring_applications.md
+          - Best Practices: toolstacks/monitoring/monitoring_best_practices.md
       - Cluster Tracing:
           - Introduction: toolstacks/tracing/tracing_index.md
           - Tracing Java Applications: toolstacks/tracing/tracing_applications.md
