@@ -67,6 +67,7 @@ nav:
       - Cluster Logging:
         - Introduction: toolstacks/logging/logging_index.md
         - Best Practices: toolstacks/logging/logging_best_practices.md
+        - Kibana Features: toolstacks/logging/kibana_features.md
       - Cluster Monitoring:
         - Introduction: toolstacks/monitoring/monitoring_index.md
         - Metrics Catalog: toolstacks/monitoring/monitoring_metrics.md
