@@ -20,6 +20,7 @@ In AWS, policies are defined through JSON documents. AWS provides pre-built poli
 __managed policies__. 
 
 ### Role
+
 A __role__ represents a set of policies which can be attached to users, services or virtual machines (EC2). Being able 
 to link roles to services or virtual machines allows you to control the permissions of services and virtual machines 
 without the need to use user IDs and credentials.
