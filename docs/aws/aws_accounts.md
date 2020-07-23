@@ -4,15 +4,15 @@
 
 Here's a direct quote from the __AWS Glossary__:
 
-```
-account:
-
-A formal relationship with AWS that is associated with all of the following:
-- The owner email address and password
-- The control of resources created under its umbrella
-- Payment for the AWS activity related to those resources
-The AWS account has permission to do anything and everything with all the AWS account resources. This is in contrast to a user, which is an entity contained within the account.
-```
+> __account__: 
+> 
+> A formal relationship with AWS that is associated with all of the following:
+> 
+> - The owner email address and password 
+> - The control of resources created under its umbrella 
+> - Payment for the AWS activity related to those resources 
+> 
+> The AWS account has permission to do anything and everything with all the AWS account resources. This is in contrast to a user, which is an entity contained within the account.
 
 In other words: an AWS account is something like an AWS cloud tenant who can manage his own private AWS resources
 which are by default invisible to other AWS cloud tenants.

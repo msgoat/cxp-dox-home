@@ -80,6 +80,11 @@ nav:
           - Tracing Java Applications: toolstacks/tracing/tracing_applications.md
           - Best Practices: toolstacks/tracing/tracing_best_practices.md
       - Cluster Identity&Access Management: toolstacks/iam/iam_index.md
+  - Cloud Basics:
+      - Introduction: cloud/index.md
+      - Cloud Capabilities: cloud/cloud_capabilities.md
+      - Cloud Terminology: cloud/cloud_terminology.md
+      - Cloud Service Categories: cloud/cloud_service_categories.md
   - AWS:
       - Introduction: aws/index.md
       - Facts & Figures: aws/aws_facts_figures.md
