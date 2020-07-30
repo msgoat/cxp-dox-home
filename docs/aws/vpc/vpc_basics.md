@@ -23,7 +23,7 @@ An `availability zone` is represented by a single independent data center or a g
 There are at least 2 - usually 3 - availability zones per [region](#region), i.e. 2 to 3 data centers 
 that are at least 40 kilometers apart, but are connected to each other via high-bandwidth data lines with low latency.
 
-![aws_regions_azs.png](img/aws_regions_azs.png)
+![aws_regions_azs.png](img/aws_regions_azs_300dpi.png)
 
 Most AWS resources have to be assigned to an Availability Zone in which they are hosted.
 
