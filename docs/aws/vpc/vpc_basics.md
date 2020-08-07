@@ -35,7 +35,7 @@ A `virtual private cloud` is a virtual network that is tied to an AWS user accou
 
 Each AWS account provides a default VPC from the beginning.
 
-![aws_vpc.png](img/aws_vpc.png)
+![aws_vpc.png](img/aws_vpc_300dpi.png)
 
 A VPC spans all [availability zones](#availability-zone-az) in a [region](#region). 
 The IP address range - the so-called CIDR block - for all resources within the VPC must be defined when the VPC is created 
@@ -45,6 +45,14 @@ add a second CIDR block to it.
 
 @see [Virtual Private Cloud (VPC)](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Introduction.html)
 
+!!! info "Quotas for VPC"
+    VPCs per region: __5__.
+    
+    IPv4 CIDR blocks per VPC: __5__
+    
+    IPv6 CIDR blocks per VPC: __1__
+    
+ 
 ### Subnets
 
 VPCs can be subdivided further with the help of subnets. 
@@ -52,7 +60,7 @@ A subnet must be within a [VPC](#virtual-private-cloud-vpc) and within an [avail
 As with a VPC, the IP address range of the subnet must also be specified when it is created and cannot be changed later. 
 The subnet's CIDR block must be a subset of the VPC's CIDR block.
 
-![aws_subnet.png](img/aws_subnet.png)
+![aws_subnet.png](img/aws_subnet_300dpi.png)
 
 There are two types of subnets:
 
@@ -61,6 +69,9 @@ There are two types of subnets:
 
 By default, all subnets within a VPC can communicate with each other. 
 Restrictions can be defined via security groups and route tables.
+
+!!! info "Quota for subnets per VPC"
+    The default quota for subnets per VPC __200__.
 
 @see [Subnets](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Introduction.html)
 
@@ -76,7 +87,7 @@ Then this particular EC2 instance can only communicate with the outside world in
 Of course, a security group can be assigned to multiple instances. 
 In this way, instances with the same security requirements can be grouped into logical groups.
 
-![AWS Security Groups](img/aws_security_groups.png)
+![AWS Security Groups](img/aws_security_groups_300dpi.png)
 
 Example:
 
@@ -97,6 +108,26 @@ A security group can subsequently be changed either via the AWS console or the A
 Although it is possible to share security groups among VPCs, security groups are assigned to a VPC in general and can be used in all subnets of the VPC. 
  
 @see [Security Groups](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_SecurityGroups.html)
+
+### Network Access Control Lists
+
+A `network ACL` is an optional layer of security for your VPC that acts like a firewall for subnets. 
+Your VPC comes with a default network ACL associated to all subnets which allows any inbound and outbound traffic. 
+You can create custom network ACL with more specific rules and associate to multiple subnets. 
+Each subnet can only be associated with one network ACL: if you attach a new one, the old one is removed.
+
+![AWS Network ACLs](img/aws_network_acls_300dpi.png)
+
+A network ACL consists of a numbered list of rules. Each rules is made up of the following parts:
+
+* __Rule number__ defines the order the rules are evaluated (from lowest to highest).
+* __Type__ of traffic (like SSH, HTTP).
+* __Protocol__ (like TCP, UDP) which has a standard protocol number. 
+* __Source__ defines the source (CIDR range) of the traffic for inbound rules.
+* __ Destination__ defines the destination (CIDR range) of the traffic for outbound rules.
+* __Allow/Deny__ determines whether to allow or deny the specified traffic.
+
+@see [Network ACLs](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html)
 
 ### Route Tables
 
@@ -121,7 +152,7 @@ Destination | Target | Beschreibung
 10.0.0.0/16 | local  | Main route that routes connections from the subnet to all local destinations in the VPC
 0.0.0.0/0 | _Internet Gateway ID_ | Special route that routes all connections from the subnest to remote destinations on the internet through the given internet gateway
 
-![AWS Route Table mit Internet Gateway](img/aws_route_table_igw.png)
+![AWS Route Table mit Internet Gateway](img/aws_route_table_300dpi.png)
 
 __Beispiel__: Routing traffic from private subnets to the internet through NAT Gateway
 
@@ -142,7 +173,7 @@ The internet gateways has two tasks:
 * To provide a target for routes in routing tables, through which the traffic can be directed to the internet.
 * Hide public IP addresses of instances in the VPC from the internet via NAT (Network Address Translation).
 
-![AWS Internet Gateway](img/aws_internet_gateway.png)
+![AWS Internet Gateway](img/aws_internet_gateway_300dpi.png)
 
 !!! warning "Internet-bound traffic has to be routed explicitly"
     The internet gateway must be defined as a target in the route table of each public subnet, 
@@ -170,7 +201,7 @@ and offers the desired reliability and high availability.
     
 NAT instances or NAT gateways must be started in public subnets because they are supposed to communicate with the Internet. In order to guarantee a high level of reliability and at the same time optimize the traffic in your own VPC, a NAT instance or a NAT gateway should be provided for each availability zone.
 
-![AWS NAT Gateway Routing](img/aws_nat_gateway.png)
+![AWS NAT Gateway Routing](img/aws_nat_gateway_300dpi.png)
 
 !!! warning "Route all internet-bound traffic from private subnets through NAT using route tables" 
     In order for the private subnets to be able to communicate with the Internet in a secure way, the route tables of the private subnets must be adapted so that every connection directed to the Internet runs via the NAT instance or the NAT gateway in the same availability zone.
@@ -187,6 +218,10 @@ Unfortunately, EIPs are very rare: Usually, you can only reserve 5 EIPs in one r
 However, if you consider that an EIP is a public IPv4 address and we are living in a time 
 when we are slowly running out of IPv4 addresses, then this constraint understandable. 
 In exceptional cases, you can negotiate with AWS to increase this limit.
+
+!!! info "Quotas for EIPs"
+    EIPs per region: __5__.
+
 
 !!! tip "Use elastic IP to access AWS resources via SSH"
     By default, any outbound SSH traffic from the msg network is blocked.

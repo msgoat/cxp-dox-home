@@ -5,7 +5,7 @@ Of course, you are free to tailor the blueprint to your own requirements.
 
 ## Overview
 
-![AWS VPC Blueprint](img/aws_vpc_blueprint.png)
+![AWS VPC Blueprint](img/aws_vpc_blueprint_300dpi.png)
 
 ### VPC spans all availability zones
 
