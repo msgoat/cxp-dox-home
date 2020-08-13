@@ -11,9 +11,9 @@ gateway, although they never intended to reach the internet.
 
 ## VPC Peering
 
-A `VPC peering` connection is a private network connection between two VPC. 
+A `VPC peering` connection is a private network connection between VPCs. 
 All traffic routed through this connection will stay inside the AWS network.
-Instances in either VPC con communicate which each other as if they were in the same VPC. 
+Instances in either VPC can communicate which each other as if they were in the same VPC. 
 
 ![VPC Peering](img/aws_vpc_2_vpc_peering.png)
 

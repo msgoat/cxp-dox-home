@@ -101,6 +101,7 @@ nav:
               - Introduction: aws/vpc/vpc_extended_networking.md
               - VPC to AWS services: aws/vpc/vpc_2_aws_services.md
               - VPC to VPC: aws/vpc/vpc_2_vpc.md
+              - Site to Site: aws/vpc/site_2_site.md
       - AWS Virtual Machines (EC2):
           - EC2 Basics: aws/ec2/ec2_basics.md
           - Creating an EC2 instance: aws/ec2/ec2_create_instance.md
