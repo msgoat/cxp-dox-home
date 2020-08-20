@@ -88,3 +88,7 @@ Route 53 offers the possibility to create health checks for targets which are re
 in hosted zones. This allows you to introduce automatic DNS failover, if one of your targets becomes unhealthy.
  
 @see [Creating Amazon Route 53 health checks and configuring DNS failover](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover.html)
+
+## Resources
+
+[AWS re:Invent 2017: DNS Demystified: Global Traffic Management with Amazon Route 53 (NET302)](https://youtu.be/PVBC1gb78r8)
