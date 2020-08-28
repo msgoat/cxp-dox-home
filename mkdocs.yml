@@ -107,6 +107,8 @@ nav:
           - Route 53 Introduction: aws/route53/aws_r53_intro.md
       - AWS Virtual Machines (EC2):
           - EC2 Basics: aws/ec2/ec2_basics.md
+          - EC2 Pricing Options: aws/ec2/ec2_purchasing_options.md
+          - EC2 Best Practices: aws/ec2/ec2_best_practices.md
           - Creating an EC2 instance: aws/ec2/ec2_create_instance.md
       - AWS Block Storage (EBS):
           - Creating an EBS volume: aws/ebs/ebs_create_volume.md

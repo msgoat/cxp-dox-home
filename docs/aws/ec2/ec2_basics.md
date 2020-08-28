@@ -115,7 +115,6 @@ or to install complete software packages into the VPC.
 
 An __Application Load Balancer__ is a virtual redundant, highly available and horizontally scaling load balancer offered by AWS, 
 which can be provisioned for a VPC. 
-You don't pay for the load balancer itself, you only pay for the traffic that is routed through the load balancer.
 
 ![AWS Application Load Balancer](img/aws_alb_moving_parts.png)
 
@@ -147,4 +146,4 @@ The targets themselves no longer need to be located in public subnets, but can a
 
 The Application Load Balancer receives requests from the Internet via the Internet gateway assigned to the VPC.
 
-@see [Application Load Balancer](http://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html)  
+@see [What is an Application Load Balancer](http://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html)  
