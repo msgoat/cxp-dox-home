@@ -34,7 +34,9 @@ The accounts created by the account vending machine can be grouped into two cate
 All accounts are created with account baselines and network baselines in place. Everything that happens within the accounts is centrally logged and audited.
 
 @see [AWS Landing Zone](https://aws.amazon.com/solutions/implementations/aws-landing-zone/)
+
 @see [What Is AWS Service Catalog?](https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html)
+
 @see [What is AWS Organizations?](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html)
 
 
