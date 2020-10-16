@@ -115,6 +115,12 @@ nav:
           - Resizing an EBS volume: aws/ebs/ebs_resize_volume.md
       - AWS Landing Zones:
           - AWS Landing Zones in a Nutshell: aws/landingzone/index.md
+  - Infrastructure as Code:
+      - Introduction: iac/index.md
+      - Tools:
+          - Terraform: terraform/index.md
+          - Packer: packer/index.md
+
   - SSH:
       - SSH Primer: ssh/ssh_primer.md
       - Connecting to Linux VMs: ssh/ssh_connect_to_vms.md
