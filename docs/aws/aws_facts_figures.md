@@ -5,7 +5,7 @@ as a pioneer and continues to lead the market with innovations to this day.
 AWS has been the market leader in IaaS providers for 10 years and is the leader in Gartner's Magic Quadrant 
 for Cloud IaaS for the seventh year in a row [^1].
 
-![Magic Quadrant for Cloud Infrastructure as a Service, Worldwide](img/gartner_iaas_magic_quadrant_2019.png)
+![Magic Quadrant for Cloud Infrastructure and Platform services 2020](img/gartner_CIPS_MQ_2020.png)
 
 In addition to the classic IaaS products such as virtual machines (Elastic Cloud Compute (EC2)), 
 Storage (Elastic Block Storage (EBS)), Object Storage (S3), 
