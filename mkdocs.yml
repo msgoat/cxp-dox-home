@@ -122,6 +122,10 @@ nav:
       - Naming Rules & Conventions: azure/az_naming.md
       - Azure Virtual Networks (VNet):
           - VNet Basics: azure/vnet/vnet_basics.md
+      - Azure Virtual Machines (VM):
+          - VM Basics: azure/vm/vm_basics.md
+      - Azure DNS:
+          - DNS records: azure/dns/dns_records.md
   - Infrastructure as Code:
       - Introduction: iac/index.md
       - Tools:

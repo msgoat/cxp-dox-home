@@ -98,10 +98,47 @@ of latency, but is not designed to support availability zones.
 
 ## Availability Zones
 
-An `availability zone` is a unique physical location with a region.
+An `availability zone` is a unique physical location within a region.
 Each zone is made up of one or more datacenters equipped with independent power, cooling, and networking. 
 To ensure resiliency, there's a minimum of three separate zones in all enabled regions.
 
 Availability zones are a high-availability offering which is not present at all regions.
 
+If availability zones are available in a region and the Azure service of your choice supports zones, you can distribute
+your resources across two zones. How these zones are mapped to actual datacenters in a region may differ from
+subscription to subscription.
+
+Unlike in AWS, Azure subnets are not bound to specific availability zones, only resources hosted inside them.
+
+@see [Regions and Availability Zones in Azure](https://docs.microsoft.com/en-us/azure/availability-zones/az-overview)
 @see [Regions that support Availability Zones in Azure](https://docs.microsoft.com/de-de/azure/availability-zones/az-region)
+@see [Regions and zones on Azure and AWS](https://docs.microsoft.com/en-us/azure/architecture/aws-professional/regions-zones)
+
+## Resource Groups
+
+A `resource group` is a container that holds related resources for an Azure solution. 
+It may contain all resources or just a part of the resources for a specific Azure solution.
+
+Thus, resource groups can be used to subdivide a complex Azure solution into layered stacks:
+
+* The `network` resource group of an Azure solution provisions all network components like VNets, subnets, NAT Gateways, Route Tables etc.
+* The `compute` resource group of the same Azure solution provisions all virtual machines, volumes and all Azure services attached to them on top of the `network` resource group. 
+
+Any resource group is linked to a particular [region](#region) and a particular [subscription](#subscription).
+
+Most resources allocated on Azure must be attached to a resource group. 
+Resources bound to a particular resource group may be moved to a different resource group even in a different subscription.
+ 
+@see [What is a resource group](https://docs.microsoft.com/en-ie/azure/azure-resource-manager/management/manage-resource-groups-portal#what-is-a-resource-group)
+@see [Terraform azurerm_resource_group](https://www.terraform.io/docs/providers/azurerm/r/resource_group.html)
+
+## Stock Keeping Unit (SKU)
+
+Represents a purchasable `Stock Keeping Unit` (SKU) under a product. These represent the different shapes of the product.
+
+__Example:__
+
+* Virtual machines come in different sizes regarding CPU, RAM, Network/IO etc. So the SKU of a virtual machine on Azure defines
+the instance type. 
+* Azure services come in different quality of service levels or SKUs: Basic, Standard, Premium. The SKU of a service
+determines the price you have to pay for a service: the higher the SKU the higher the price. 
