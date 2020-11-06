@@ -21,6 +21,8 @@ to it.
 
 ![](img/az_vnet.png)
 
+@see [Virtual Network documentation](https://docs.microsoft.com/en-us/azure/virtual-network/)
+
 @see [Terraform azurerm_virtual_network](https://www.terraform.io/docs/providers/azurerm/r/virtual_network.html)
 
 ## Subnets
@@ -29,9 +31,11 @@ to it.
 via network security groups.
 
 A subnet spans all [availability zones](../az_get_started.md#availability-zones) of a [region](../az_get_started.md#region).
-Although a subnet may have multiple address prefixes (CIDR blocks), it's always a good idea to thinks about how to
+Although a subnet may have multiple address prefixes (CIDR blocks), it's always a good idea to think about how to
 distribute your VNets address space among your subnets, before you actually create them.
 Subnets must have distinct non-overlapping address prefixes.
+
+@see [Virtual Network documentation](https://docs.microsoft.com/en-us/azure/virtual-network/)
 
 @see [Terraform azurerm_subnet](https://www.terraform.io/docs/providers/azurerm/r/subnet.html)
 
@@ -98,6 +102,42 @@ using either RDP or SSH.
 !!! danger
     If you want to add the Azure Bastion service to your VNet, you must add a subnet named `AzureBastionSubnet`!
 
-@see [What is Azure Bastion?](https://docs.microsoft.com/en-us/azure/bastion/bastion-overview)
+@see [Azure Bastion documentation](https://docs.microsoft.com/en-us/azure/bastion/)
 
 @see [Terraform azure_bastion_host](https://www.terraform.io/docs/providers/azurerm/r/bastion_host.html)
+
+## Load Balancer
+
+An Azure `load balancer` is a Level-4 load balancer which distributes inbound traffic
+that arrive at the load balancer's front end to backend pool instances.
+The routing happens according to load balancing rules and health probes.
+The backend pool instance can be [virtual machine](../vm/vm_basics.md#virtual-machine)s 
+or instances in a [virtual machine scale set](../vm/vm_basics.md#virtual-machine-scale-set).
+
+!!! info
+   An Azure load balancer resembles an AWS Network Load Balancer.
+   
+@see [Load Balancer documentation](https://docs.microsoft.com/en-us/azure/load-balancer/)
+
+@see [Terraform azurerm_lb](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/lb)
+
+## Application Gateway
+
+An Azure `application gateway` is a Level-7 load balancer which distributes inbound web traffic
+to your web applications.
+
+![](img/figure1-720.png)
+
+An application gateway includes the following features:
+* Host-based or path-based routing
+* SSL/TLS termination
+* Ingress Controller for AKS
+* Websocket and HTTP/2 support
+* ...
+ 
+!!! info
+   An Azure Application Gateways can be compared to an AWS Application Load Balancer.
+
+@see [Azure Application Gateway documentation](https://docs.microsoft.com/en-us/azure/application-gateway/)
+
+@see [Terraform azurerm_application_gateway](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/application_gateway)
