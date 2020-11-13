@@ -126,6 +126,8 @@ nav:
           - VM Basics: azure/vm/vm_basics.md
       - Azure DNS:
           - DNS Basics: azure/dns/dns_basics.md
+      - Azure AKS:
+            - AKS Basics: azure/aks/aks_basics.md
   - Infrastructure as Code:
       - Introduction: iac/index.md
       - Tools:
