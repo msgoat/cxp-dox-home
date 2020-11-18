@@ -49,13 +49,13 @@ A network security group consists of a set of rules which come in two different 
 egress rules control outbound traffic. 
 Each network security group has a set of default rules, which are automatically added to the group when it is created.
  
-@see [Network security groups](https://docs.microsoft.com/de-de/azure/virtual-network/network-security-groups-overview)
+@see [Network security groups](https://docs.microsoft.com/en-us/azure/virtual-network/network-security-groups-overview)
 
 @see [Terraform azurerm_network_security_group](https://www.terraform.io/docs/providers/azurerm/r/network_security_group.html)
 
 ## Application Security Groups
 
-@see [Application security groups](https://docs.microsoft.com/de-de/azure/virtual-network/application-security-groups)
+@see [Application security groups](https://docs.microsoft.com/en-us/azure/virtual-network/application-security-groups)
 
 ## NAT Gateways
 
@@ -67,7 +67,7 @@ which having to add an explicit route to the subnets route table.
 
 Each NAT gateway needs either a [public IP](#public-ip) or a [public IP prefix](#public-ip-prefix) to be able to translate private IP addresses into public ones.  
 
-@see [Designing virtual networks with NAT gateway resources](https://docs.microsoft.com/de-de/azure/virtual-network/nat-gateway-resource)
+@see [Designing virtual networks with NAT gateway resources](https://docs.microsoft.com/en-us/azure/virtual-network/nat-gateway-resource)
 
 @see [Terraform azurerm_nat_gateway](https://www.terraform.io/docs/providers/azurerm/r/nat_gateway.html)
 

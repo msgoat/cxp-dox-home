@@ -94,7 +94,7 @@ to support availability zones.
 * An `alternate region` provides a second region for disaster recovery needs and optimization
 of latency, but is not designed to support availability zones.
 
-@see [Regions and Availability Zones in Azure](https://docs.microsoft.com/de-de/azure/availability-zones/az-overview)
+@see [Regions and Availability Zones in Azure](https://docs.microsoft.com/en-us/azure/availability-zones/az-overview)
 
 ## Availability Zones
 
@@ -111,7 +111,7 @@ subscription to subscription.
 Unlike in AWS, Azure subnets are not bound to specific availability zones, only resources hosted inside them.
 
 @see [Regions and Availability Zones in Azure](https://docs.microsoft.com/en-us/azure/availability-zones/az-overview)
-@see [Regions that support Availability Zones in Azure](https://docs.microsoft.com/de-de/azure/availability-zones/az-region)
+@see [Regions that support Availability Zones in Azure](https://docs.microsoft.com/en-us/azure/availability-zones/az-region)
 @see [Regions and zones on Azure and AWS](https://docs.microsoft.com/en-us/azure/architecture/aws-professional/regions-zones)
 
 ## Resource Groups
