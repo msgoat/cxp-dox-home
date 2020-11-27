@@ -122,6 +122,10 @@ nav:
       - Naming Rules & Conventions: azure/az_naming.md
       - Azure Virtual Networks (VNet):
           - VNet Basics: azure/vnet/vnet_basics.md
+          - VNet Extended Networking:
+              - VNet-to-VNet with VNet Peering: azure/vnet/az_vnet_peering.md
+              - Point-to-Site/Site-to-Site with VPN Gateways: azure/vnet/az_vpn_gateway.md
+              - Site-to-Site with ExpressRoute: azure/vnet/az_vpn_express_route.md
       - Azure Virtual Machines (VM):
           - VM Basics: azure/vm/vm_basics.md
       - Azure DNS:
