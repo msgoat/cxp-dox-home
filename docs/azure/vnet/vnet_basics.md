@@ -37,7 +37,8 @@ Subnets must have distinct non-overlapping address prefixes.
 
 @see [Virtual Network documentation](https://docs.microsoft.com/en-us/azure/virtual-network/)
 
-@see [Terraform azurerm_subnet](https://www.terraform.io/docs/providers/azurerm/r/subnet.html)
+@see [Terraform azurerm_subnet](https://www.terraform.io/docs/providers/azurerm/r/subnet.html),
+[cidrsubnets](https://www.terraform.io/docs/configuration/functions/cidrsubnets.html)
 
 ## Network Security Groups
 
