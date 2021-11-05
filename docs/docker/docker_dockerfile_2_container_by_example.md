@@ -17,10 +17,10 @@ This article walks you through the complete development process from a Dockerfil
 ```Dockerfile
 FROM adoptopenjdk/openjdk11:x86_64-alpine-jre-11.0.6_10
 
-LABEL maintainer="${yourUserIdOrEmail}" \
-        group.msg.at.cloud.cnj-hello-backend-spring.project="CXP" \
-        group.msg.at.cloud.cnj-hello-backend-spring.version="3.0.0" \
-        group.msg.at.cloud.cnj-hello-backend-spring.description="Simplest possible cloud native java backend based on Spring Boot"
+LABEL maintainer="${yourUserIdOrEmail}"
+LABEL group.msg.at.cloud.cnj-hello-backend-spring.project="CXP" 
+LABEL group.msg.at.cloud.cnj-hello-backend-spring.version="3.0.0" 
+LABEL group.msg.at.cloud.cnj-hello-backend-spring.description="Simplest possible cloud native java backend based on Spring Boot"
 
 ENV JAVA_OPTS="" \
     DOCKER_JAVA_OPTS="" \
@@ -138,23 +138,23 @@ cnj-hello-backend-spring                                            latest      
 
 ## Pushing Docker Images to a Docker Repository
 
-1\. Login to the private Docker Registry at `https://docker.at41tools.k8s.aws.msgoat.eu` with the username `${dockerUserName}` and password `${dockerPassword}` given to you:
+1\. Login to the private Docker Registry at `https://docker.cloudtrain.aws.msgoat.eu` with the username `${dockerUserName}` and password `${dockerPassword}` given to you:
 
 ```shell 
-$ docker login -u ${dockerUserName} docker.at41tools.k8s.aws.msgoat.eu
+$ docker login -u ${dockerUserName} docker.cloudtrain.aws.msgoat.eu
 Password: ${dockerPassword}
 Login Succeeded
 ```
 2\. Retag the Docker image with a fully qualified image name including repository name and a personal version tag:
 
 ```shell
-docker tag cnj-hello-backend-spring:latest docker.at41tools.k8s.aws.msgoat.eu/cxp/cnj-hello-backend-spring:3.0.0-${userId}
+docker tag cnj-hello-backend-spring:latest docker.cloudtrain.aws.msgoat.eu/cxp/cnj-hello-backend-spring:3.0.0-${userId}
 ```
 
 Please notice that the fully qualified image name now contains more parts than before:
 
-* `docker.at41tools.k8s.aws.msgoat.eu` represents the URL of our private Docker registry
-* `cxp` represents the project within the private Docker registry for all Docker images used in the Cloud Expert Program
+* `docker.cloudtrain.aws.msgoat.eu` represents the URL of our private Docker registry
+* `cxp` represents the project or library within the private Docker registry for all Docker images used in the Cloud Expert Program
 * `cnj-hello-backend-spring` represents the simple Docker image name (here: the name of the Spring Boot application)
 * `3.0.0-${userId}` represents the tag that we attached to this Docker image. It should always be a proper version number according
 to [Semantic Versioning](https://semver.org/). Since we all use the same repository in the Docker registry we have to add our user ID as
@@ -163,8 +163,8 @@ a suffix to the tag; otherwise we would override images pushed by a colleague.
 3\. Push the Docker image to the remote repository with __docker push__:
 
 ```shell
-$ docker push docker.at41tools.k8s.aws.msgoat.eu/cxp/cnj-hello-backend-spring:3.0.0-${userId}
-The push refers to repository [docker.at41tools.k8s.aws.msgoat.eu/cxp/cnj-hello-backend-spring]
+$ docker push docker.cloudtrain.aws.msgoat.eu/cxp/cnj-hello-backend-spring:3.0.0-${userId}
+The push refers to repository [docker.cloudtrain.aws.msgoat.eu/cxp/cnj-hello-backend-spring]
 7f9942ee293b: Pushed
 2899c2ab947c: Pushed
 1363d9859b9f: Pushed
@@ -183,11 +183,11 @@ repository we are pulling from is a public repository. Thus, no login required n
 2\. Pull the image from the remote repository using __docker pull__ with the fully qualified name of the image:
 
 ```shell 
-$ docker pull docker.at41tools.k8s.aws.msgoat.eu/cxp/cnj-hello-backend-spring:3.0.0-${userId}
+$ docker pull docker.cloudtrain.aws.msgoat.eu/cxp/cnj-hello-backend-spring:3.0.0-${userId}
 3.0.0-******: Pulling from cxp/cnj-hello-backend-spring
 Digest: sha256:9dd9f754681871f25651851242fe2e0eff47953d92ae6a4c5afda7e7318b46da
-Status: Image is up to date for docker.at41tools.k8s.aws.msgoat.eu/cxp/cnj-hello-backend-spring:3.0.0-******
-docker.at41tools.k8s.aws.msgoat.eu/cxp/cnj-hello-backend-spring:3.0.0-******
+Status: Image is up to date for docker.cloudtrain.aws.msgoat.eu/cxp/cnj-hello-backend-spring:3.0.0-******
+docker.cloudtrain.aws.msgoat.eu/cxp/cnj-hello-backend-spring:3.0.0-******
 ```
 
 Since the image is still present on our local machine, Docker just checks the digests and downloads nothing.
@@ -197,7 +197,7 @@ Since the image is still present on our local machine, Docker just checks the di
 1\. Create and start the Docker container with __docker run__ (check __docker run --help__ for information about all given command line arguments):
 
 ```shell 
-$ docker run --name cnj-hello-backend-spring --rm -p 18080:8080 -d docker.at41tools.k8s.aws.msgoat.eu/cxp/cnj-hello-backend-spring:3.0.0-${userId}
+$ docker run --name cnj-hello-backend-spring --rm -p 18080:8080 -d docker.cloudtrain.aws.msgoat.eu/cxp/cnj-hello-backend-spring:3.0.0-${userId}
 d016125da6218cb76471b9ae46d083b1a0873837c41821edc2a310403526ff4b
 ```
 
@@ -213,7 +213,7 @@ Given command line arguments are:
 ```shell 
 $ docker ps
 CONTAINER ID        IMAGE                                                                          COMMAND                  CREATED             STATUS              PORTS                     NAMES
-d016125da621        docker.at41tools.k8s.aws.msgoat.eu/cxp/cnj-hello-backend-spring:3.0.0-******   "/home/spring/docker…"   3 minutes ago       Up 3 minutes        0.0.0.0:18080->8080/tcp   cnj-hello-backend-spring
+d016125da621        docker.cloudtrain.aws.msgoat.eu/cxp/cnj-hello-backend-spring:3.0.0-******   "/home/spring/docker…"   3 minutes ago       Up 3 minutes        0.0.0.0:18080->8080/tcp   cnj-hello-backend-spring
 ```
 
 3\. Open a browser on `http://localhost:18080/api/v1/hello` to access the Spring Boot application
