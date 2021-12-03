@@ -20,9 +20,9 @@ Some of these security context setting can be defined on pod level, some on cont
 
 @see [Configure a Security Context for a Pod or Container](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/)
 
-@see [PodSecurityContext Fragment Reference](https://kubernetes.cn/docs/reference/generated/kubernetes-api/v1.18/#podsecuritycontext-v1-core)
+@see [PodSecurityContext Fragment Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#podsecuritycontext-v1-core)
 
-@see [SecurityContext Fragment Reference](https://kubernetes.cn/docs/reference/generated/kubernetes-api/v1.18/#securitycontext-v1-core)
+@see [SecurityContext Fragment Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#securitycontext-v1-core)
 
 __Example: Deployment Manifest with Pod Security Context__
 
@@ -86,9 +86,10 @@ Kubernetes will refuse to run any pod which violates any of these policies.
 Activating pod security policies requires special authorization of the pod which wants to use them.
 This authorization is granted through a role which is attached to the service account which runs the pod.
 
-Since pod security policies are a cluster-level resource they are mostly managed by cluster administrators.
-In many enterprise-grade Kubernetes cluster you will not be allowed to create your own PSP.
+!!! info 
+    Since pod security policies are a cluster-level resource they are mostly managed by cluster administrators.
+    In many enterprise-grade Kubernetes cluster you will not be allowed to create your own PSP.
 
 @see [Pod Security Policies](https://kubernetes.io/docs/concepts/policy/pod-security-policy/)
 
-@see [PodSecurityPolicy Manifest Reference](https://kubernetes.cn/docs/reference/generated/kubernetes-api/v1.18/#podsecuritypolicy-v1beta1-policy)
+@see [PodSecurityPolicy Manifest Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#podsecuritypolicy-v1beta1-policy)

@@ -81,7 +81,7 @@ a particular algorithm (see first reference below for details).
  
 @see [HorizontalPodAutoscaler](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)
 
-@see [HorizontalPodAutoscaler Manifest Reference](https://kubernetes.cn/docs/reference/generated/kubernetes-api/v1.18/#horizontalpodautoscaler-v1-autoscaling)
+@see [HorizontalPodAutoscaler Manifest Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#horizontalpodautoscaler-v2beta1-autoscaling)
 
 __Example: HorizontalPodAutoscaler manifest__
 
@@ -138,7 +138,7 @@ but by some expected or unexpected event concerning the platform your applicatio
     
 @see [Disruptions](https://kubernetes.io/docs/concepts/workloads/pods/disruptions/)
 
-@see [PodDisruptionBudget Manifest Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#poddisruptionbudget-v1beta1-policy)
+@see [PodDisruptionBudget Manifest Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#poddisruptionbudget-v1beta1-policy)
 
 __Example: PodDisruptionBudget manifest__
 
@@ -185,7 +185,7 @@ This affinity language allows you to spread your pods across the cluster's worke
 
 @see [Assigning Pods to Nodes](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/)
 
-@see [Affinity PodSpec Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#affinity-v1-core)
+@see [Affinity PodSpec Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#affinity-v1-core)
 
 Possible rules are:
 
@@ -200,6 +200,20 @@ __Example: Optimum redundancy on a cluster spanning multiple availability zones_
 
 ![](img/k8s_ha_pod_antiaffinity.png)
 
+## Topology Spread Constraints
+
+A `topology spread constraint` describes how a group of pods ought to spread across topology domains. 
+Scheduler will schedule pods in a way which abides by the constraints. 
+All topologySpreadConstraints are ANDed.
+These constraints allow you to spread your pods across `availability zones` in a region of a public cloud provider 
+which adds another level of resilience to your workload since your workload can survive even the outage of an 
+availability zone now.
+
+Topology spread constraints are defined within a [pod](./k8s_basic_objects.md#pod) template specification.
+
+@see [Pod Topology Spread Constraints](https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/)
+
+@see [TopologySpreadConstraint PodSpec Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#topologyspreadconstraint-v1-core)
   
 
 
