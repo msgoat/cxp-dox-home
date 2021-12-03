@@ -81,7 +81,7 @@ helm lint cxp-hello-helm
 To install a Helm chart as a new release, you have to run `helm install`:
 
 ```shell
-helm install cxp-hello-helm cxp-hello-helm --namespace miket92 --debug --atomic
+helm install cxp-hello-helm cxp-hello-helm --namespace cxp-team-miket92 --debug --atomic
 ```
 
 Here's a list of useful command line arguments:
@@ -98,7 +98,7 @@ For a complete list of command line arguments please run `helm install --help`.
 To upgrade an existing release after you modified your chart, you have to run `helm upgrade`:
 
 ```shell
-helm upgrade cxp-hello-helm cxp-hello-helm --namespace miket92 --debug --atomic
+helm upgrade cxp-hello-helm cxp-hello-helm --namespace cxp-team-miket92 --debug --atomic
 ```
 
 Helm will only perform an incremental upgrade of your existing release: only the missing or modified parts are updated; all unchanged parts will not be touched.
@@ -118,7 +118,7 @@ For a complete list of command line arguments please run `helm upgrade --help`.
 To remove an existing release from the cluster, you have to run `helm uninstall`:
 
 ```shell
-helm uninstall cxp-hello-helm --namespace miket92 --debug
+helm uninstall cxp-hello-helm --namespace cxp-team-miket92 --debug
 ```
 
 Here's a list of useful command line arguments:
@@ -135,7 +135,7 @@ For a complete list of command line arguments please run `helm upgrade --help`.
 To show all existing releases in a particular namespace, you have to run `helm list`:
 
 ```shell
-helm list --namespace miket92
+helm list --namespace cxp-team-miket92
 ```
 
 Here's a list of useful command line arguments:
@@ -150,7 +150,7 @@ For a complete list of command line arguments please run `helm list --help`.
 To check the status of a specific releases in a particular namespace, you have to run `helm status`:
 
 ```shell
-helm status cxp-hello-helm --namespace miket92
+helm status cxp-hello-helm --namespace cxp-team-miket92
 ```
 
 Here's a list of useful command line arguments:
