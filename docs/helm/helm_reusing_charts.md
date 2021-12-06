@@ -89,7 +89,7 @@ The `dependencies` element defines all dependencies to external charts: __postgr
 Each dependency is specified through the attributes:
 
 * `name`: the chart name of the external chart as exposed by the chart repository
-* `chart`: the version of the external chart
+* `version`: the version of the external chart
 * `repository`: URL or alias name of the chart repository hosting the external chart
 
 Edit your Chart.yaml accordingly.
