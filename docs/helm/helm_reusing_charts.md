@@ -154,5 +154,6 @@ The default values will be taken from the `values.yaml` packaged in the shared c
 
 #### Managing the wrapper chart
 
-Now you are go to go: install, upgrade and uninstall your wrapper charts as shown in [Managing Helm Releases](helm_managing_releases.md).
+Now you are good to go: install, upgrade and uninstall your wrapper charts as shown in [Managing Helm Releases]
+(helm_managing_releases.md).
 
