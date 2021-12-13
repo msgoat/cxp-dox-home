@@ -88,7 +88,7 @@ The `dependencies` element defines all dependencies to external charts: __postgr
 Each dependency is specified through the attributes:
 
 * `name`: the chart name of the external chart as exposed by the chart repository
-* `chart`: the version of the external chart
+* `version`: the version of the external chart
 * `repository`: URL or alias name of the chart repository hosting the external chart
 
 Edit your Chart.yaml accordingly.
@@ -153,5 +153,6 @@ The default values will be taken from the `values.yaml` packaged in the shared c
 
 #### Managing the wrapper chart
 
-Now you are go to go: install, upgrade and uninstall your wrapper charts as shown in [Managing Helm Releases](helm_managing_releases.md).
+Now you are good to go: install, upgrade and uninstall your wrapper charts as shown in [Managing Helm Releases]
+(helm_managing_releases.md).
 
