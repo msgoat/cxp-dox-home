@@ -7,7 +7,7 @@ Popular choices for Kubernetes ingress controllers are:
 * [NGinX](https://www.nginx.com/)
 * [Traefik](https://containo.us/traefik/)
 
-In our CXP cluster we are using Traefik as the default ingress controller.
+In our CXP cluster we are using NGinX as the default ingress controller.
 
 ## Overview
 
@@ -30,11 +30,11 @@ specific node picked from the target group and the portnumber of the node port i
 Thus, the original request URI is replaced by __http://${nodeIP}:30080/miket92/cxp-hello-k8s__ which points to a specific node
 in the cluster.
 
-`Traefik` as our ingress controller is exposed via Kubernetes node port 30080 to the outside world. 
-A node port is exposed on any node of the cluster, even if traefik is not running on that particular node.
-Each node which receives the incoming request on its node port simply forwards the request to the underlying traefik service.
+`NGinX` as our ingress controller is exposed via Kubernetes node port 30080 to the outside world. 
+A node port is exposed on any node of the cluster, even if NGinX is not running on that particular node.
+Each node which receives the incoming request on its node port simply forwards the request to the underlying NGinX service.
 
-The traefik services uses the `ingress` objects in its internal route table to identify the actual recipient service of 
+The NGinX services uses the `ingress` objects in its internal route table to identify the actual recipient service of 
 the received event and routes the request to the actual service. During this process, the request URI 
 __http://${nodeIP}:30080/miket92/cxp-hello-k8s__ is replaced with the internal URI of the target service __http://cxp-hello-k8s.miket92__
 and according to the __PathPrefixStrip__ directive the original path __/miket92/cxp-hello-k8s__ is stripped from the

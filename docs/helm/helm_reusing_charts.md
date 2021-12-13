@@ -8,9 +8,8 @@ GitHub repo [msgoat/cxp-helm-reuse-charts](https://github.com/msgoat/cxp-helm-re
 ## Introducing shared charts
 
 One of the killer features of Helm is the ability to share charts with the community using
-chart repositories. The first community chart repository to check for reusable charts is still
-[Helm Hub](https://hub.helm.sh/), the source code for most of these charts 
- is stored on GitHub at [Helm Charts](https://github.com/helm/charts).
+chart repositories. The most common chart repository to check for reusable charts is 
+[Artifact Hub](https://artifacthub.io/).
  
 Although Helm Hub and the Helm Charts repo offer various channels (incubator > test > stable), you
 should definitely focus on the __stable__ channel.
