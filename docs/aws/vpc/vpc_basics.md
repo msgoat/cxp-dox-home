@@ -65,7 +65,7 @@ The subnet's CIDR block must be a subset of the VPC's CIDR block.
 There are two types of subnets:
 
 * __public__ subnets are accessible from the internet
-* __private__ subnest are only visible within a VPC
+* __private__ subnets are only visible within a VPC
 
 By default, all subnets within a VPC can communicate with each other. 
 Restrictions can be defined via security groups and route tables.
@@ -150,7 +150,7 @@ __Beispiel__: Routing traffic from public subnets to the internet via an Interne
 Destination | Target | Beschreibung
 ----------- | ------ | ------------
 10.0.0.0/16 | local  | Main route that routes connections from the subnet to all local destinations in the VPC
-0.0.0.0/0 | _Internet Gateway ID_ | Special route that routes all connections from the subnest to remote destinations on the internet through the given internet gateway
+0.0.0.0/0 | _Internet Gateway ID_ | Special route that routes all connections from the subnets to remote destinations on the internet through the given internet gateway
 
 ![AWS Route Table mit Internet Gateway](img/aws_route_table_300dpi.png)
 
@@ -159,7 +159,7 @@ __Beispiel__: Routing traffic from private subnets to the internet through NAT G
 Destination | Target | Beschreibung
 ----------- | ------ | ------------
 10.0.0.0/16 | local  | Main route that routes connections from the subnet to all local destinations in the VPC
-0.0.0.0/0 | _NAT Gateway ID_ | Special route that routes all connections from the subnest to remote destinations on the internet through the given NAT gateway 
+0.0.0.0/0 | _NAT Gateway ID_ | Special route that routes all connections from the subnets to remote destinations on the internet through the given NAT gateway 
 
 @see [Route Tables](http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Route_Tables.html)
     
