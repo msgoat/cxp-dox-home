@@ -113,6 +113,9 @@ nav:
       - AWS Block Storage (EBS):
           - Creating an EBS volume: aws/ebs/ebs_create_volume.md
           - Resizing an EBS volume: aws/ebs/ebs_resize_volume.md
+      - AWS Kubernetes as a Service (EKS):
+          - Introducing Amazon EKS: aws/eks/eks_intro.md
+          - Amazon EKS-specific features, requirements and conventions: aws/eks/eks_specifics.md
       - AWS Landing Zones:
           - AWS Landing Zones in a Nutshell: aws/landingzone/index.md
   - Azure:
