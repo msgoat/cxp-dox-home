@@ -13,6 +13,11 @@ markdown_extensions:
       linenums: true
   - toc:
       permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
 theme: material
 nav:
   - Home: index.md
@@ -116,6 +121,14 @@ nav:
       - AWS Kubernetes as a Service (EKS):
           - Introducing Amazon EKS: aws/eks/eks_intro.md
           - Amazon EKS-specific features, requirements and conventions: aws/eks/eks_specifics.md
+          - Managing Amazon EKS clusters: aws/eks/eks_management.md
+          - Managing AWS EKS clusters with eksctl:
+              - Hands-On eksctl: aws/eks/eks_eksctl.md
+              - HOW-TO create an EKS cluster with eksctl: aws/eks/eks_eksctl_create_cluster.md
+              - HOW-TO add node groups to an EKS cluster with eksctl: aws/eks/eks_eksctl_add_nodegroup.md
+              - HOW-TO move workloads between node groups with eksctl: aws/eks/eks_eksctl_move_workloads.md
+              - HOW-TO remove node groups from an EKS cluster with eksctl: aws/eks/eks_eksctl_remove_nodegroup.md
+              - HOW-TO delete an EKS cluster with eksctl: aws/eks/eks_eksctl_delete_cluster.md
       - AWS Landing Zones:
           - AWS Landing Zones in a Nutshell: aws/landingzone/index.md
   - Azure:
@@ -134,7 +147,7 @@ nav:
       - Azure DNS:
           - DNS Basics: azure/dns/dns_basics.md
       - Azure AKS:
-            - AKS Basics: azure/aks/aks_basics.md
+          - AKS Basics: azure/aks/aks_basics.md
   - Infrastructure as Code:
       - Introduction: iac/index.md
       - Tools:
