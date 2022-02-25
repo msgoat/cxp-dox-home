@@ -92,7 +92,7 @@ This will create a cluster with the following default parameters:
 * an exciting auto-generated name, e.g., fabulous-mushroom-1527688624
 * two m5.large worker nodes which suit most common use-cases
 * the EC2 worker nodes use the latest version of the AWS EKS AMI
-* the cluster will be hosted in the `us-west-2 region`
+* the cluster will be hosted in your default region (as specified by your AWS CLI configuration)
 * the cluster is running within dedicated VPC (check your quotas)
 
 !!! tip "Start with eksctl to manage your EKS clusters"
