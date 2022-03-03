@@ -129,6 +129,8 @@ nav:
               - HOW-TO move workloads between node groups with eksctl: aws/eks/eks_eksctl_move_workloads.md
               - HOW-TO remove node groups from an EKS cluster with eksctl: aws/eks/eks_eksctl_remove_nodegroup.md
               - HOW-TO delete an EKS cluster with eksctl: aws/eks/eks_eksctl_delete_cluster.md
+          - AWS EKS Reference Blueprints: aws/eks/eks_blueprints.md
+          - AWS EKS Best Practives and Security Baselines: aws/eks/eks_best_practices_and_security_baselines.md
       - AWS Landing Zones:
           - AWS Landing Zones in a Nutshell: aws/landingzone/index.md
   - Azure:
