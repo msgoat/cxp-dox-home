@@ -1,0 +1,3 @@
+# AWS Lambda Use Cases: Simple REST request processing
+
+TODO: to be continued...

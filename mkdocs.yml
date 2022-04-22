@@ -155,6 +155,18 @@ nav:
       - Tools:
           - Terraform: terraform/index.md
           - Packer: packer/index.md
+  - Serverless Computing:
+      - Introduction: serverless/index.md
+      - Serverless Applications: serverless/serverless_applications.md
+      - Serverless with AWS Lambda:
+           - Introducing AWS Lambda: aws/lambda/lambda_intro.md
+           - Getting started with AWS Lambda: aws/lambda/lambda_get_started.md
+           - AWS Lambda Use Cases:
+               - Simple REST request processing: aws/lambda/lambda_use_case_simple_rest_processing.md
+               - Complex REST request processing: aws/lambda/lambda_use_case_complex_rest_processing.md
+           - Deep Dive into AWS Lambda:
+               - Planes of AWS Lambda: aws/lambda/lambda_deep_dive_planes.md
+               - Synchronous invoke: aws/lambda/lambda_deep_dive_synchronous_invoke.md
   - SSH:
       - SSH Primer: ssh/ssh_primer.md
       - Connecting to Linux VMs: ssh/ssh_connect_to_vms.md
