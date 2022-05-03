@@ -161,6 +161,7 @@ nav:
       - Serverless with AWS Lambda:
            - Introducing AWS Lambda: aws/lambda/lambda_intro.md
            - Getting started with AWS Lambda: aws/lambda/lambda_get_started.md
+           - SAM Prerequisites: aws/lambda/lambda_sam_prerequisites.md
            - AWS Lambda Use Cases:
                - Simple REST request processing: aws/lambda/lambda_use_case_simple_rest_processing.md
                - Complex REST request processing: aws/lambda/lambda_use_case_complex_rest_processing.md
