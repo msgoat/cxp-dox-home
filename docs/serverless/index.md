@@ -12,13 +12,20 @@ Service Providers promising
 
 ## What is serverless computing?
 
-> `Serverless computing` is a method of providing backend services on an as-used basis. 
-> Servers are still used, but a company that gets backend services from a serverless vendor is charged based on usage, 
-> not a fixed amount of bandwidth or number of servers.
+!!! quote "Serverless Computing"
+    `Serverless computing` is a method of providing backend services on an as-used basis. 
+    Servers are still used, but a company that gets backend services from a serverless vendor is charged based on usage, 
+    not a fixed amount of bandwidth or number of servers.
 
 ## PROs and CONs of serverless computing
 
-> TODO: add a table with the headlines from the following details chapter
+| PROs | CONs                                          |
+| --- |-----------------------------------------------|
+| No server management | Testing and debugging become more challenging | 
+| Reduced cost due to pay-as-you-go | Introduces new security concerns              | 
+| Serverless is inherently scalable | Not built for long-running processes          | 
+| Facilitates quick deployments and updates | Performance issues through cold starts        | 
+| Better latency through edge locations | Inevitable vendor lock-in | 
 
 ## Advantages of serverless computing
 
@@ -32,7 +39,7 @@ frees up developers to create and expand their applications without being constr
 
 As in a 'pay-as-you-go' phone plan, developers are only charged for what they use. Code only runs when backend functions
 are needed by the serverless application, and the code automatically scales up as needed. Provisioning is dynamic,
-precise, and real-time. Some services are so exact that they break their charges down into 100-millisecond increments.
+precise, and real-time. 
 In contrast, in a traditional 'server-full' architecture, developers have to project in advance how much server capacity
 they will need and then purchase that capacity, whether they end up using it or not.
 
@@ -41,7 +48,6 @@ they will need and then purchase that capacity, whether they end up using it or 
 Applications built with a serverless infrastructure will scale automatically as the user base grows or usage increases.
 If a function needs to be run in multiple instances, the vendor's servers will start up, run, and end them as they are
 needed, often using containers.
-(The function will start up more quickly if it has been run recently – see 'Performance may be affected' below.)
 As a result, a serverless application will be able to handle an unusually high number of requests just as well as it can
 process a single request from a single user. A traditionally structured application with a fixed amount of server space
 can be overwhelmed by a sudden increase in usage.
@@ -60,8 +66,7 @@ make changes to the whole application; instead, developers can update the applic
 
 Because the application is not hosted on an origin server, its code can be run from anywhere. It is therefore possible,
 depending on the vendor used, to run application functions on servers that are close to the end user. This reduces
-latency because requests from the user no longer have to travel all the way to an origin server. Cloudflare Workers
-enables this kind of serverless latency reduction.
+latency because requests from the user no longer have to travel all the way to an origin server.
 
 ## Disadvantages of serverless computing
 
@@ -69,22 +74,21 @@ enables this kind of serverless latency reduction.
 
 It is difficult to replicate the serverless environment in order to see how code will actually perform once deployed.
 Debugging is more complicated because developers do not have visibility into backend processes, and because the
-application is broken up into separate, smaller functions. The Cloudflare Workers Playground is a sandbox that helps
-reduce friction in testing and debugging.
+application is broken up into separate, smaller functions.
 
 ### Introduces new security concerns
 
 When vendors run the entire backend, it may not be possible to fully vet their security, which can especially be a
-problem for applications that handle personal or sensitive data.
+problem for applications that process and store personal or sensitive data.
 
 Because companies are not assigned their own discrete physical servers, serverless providers will often be running code
 from several of their customers on a single server at any given time. This issue of sharing machinery with other parties
 is known as 'multitenancy' – think of several companies trying to lease and work in a single office at the same time.
 Multitenancy can affect application performance and, if the multi-tenant servers are not configured properly, could
 result in data exposure. Multitenancy has little to no impact for networks that sandbox functions correctly and have
-powerful enough infrastructure. For instance, Cloudflare runs a 15-Tbps network with enough excess capacity to mitigate
-service degradation, and all serverless functions hosted by Cloudflare run in their own sandbox (via the Chrome V8
-engine).
+powerful enough infrastructure.
+
+As of the time of this writing, confidential computing is not supported by any available serverless platform.
 
 ### Not built for long-running processes
 
@@ -94,27 +98,28 @@ processes in a serverless infrastructure compared to a traditional one.
 
 ### Performance issues through cold starts
 
-Because it's not constantly running, serverless code may need to 'boot up' when it is used. This startup time may
-degrade performance. However, if a piece of code is used regularly, the serverless provider will keep it ready to be
-activated – a request for this ready-to-go code is called a 'warm start.' A request for code that hasn't been used in a
-while is called a 'cold start.'
-
-Cloudflare Workers largely avoids the cold-starting issue by using the Chrome V8 engine, which in most cases is able to
-start up and run JavaScript code in under 5 milliseconds. If the code is already running, the response time is under a
-millisecond. Learn more about the performance of different serverless platforms.
+Because it's not constantly running, serverless code may need to 'boot up' when it is invoked for the first time. 
+This `cold start` startup time may degrade performance. However, if a piece of code is used regularly, the serverless provider will keep it ready to be
+activated – a request for this ready-to-go code is called a `warm start`.
 
 ### Inevitable vendor lock-in
 
-Allowing a vendor to provide all backend services for an application inevitably increases reliance on that vendor.
-Setting up a serverless architecture with one vendor can make it difficult to switch vendors if necessary, especially
-since each vendor offers slightly different features and workflows. (Cloudflare Workers are easier to migrate because
-they are written in JavaScript and written against the widely used service workers API.)
+Currently, all serverless platforms provided by the usual cloud service providers are proprietary.
+Relying on a particular serverless offering automatically introduces a strong dependency on its vendor. 
+Moving a serverless application from one vendor to another implies a complete rewrite of the application code in most cases.
 
 ## When to use serverless computing
 
 ### tl;dr Most of the time!
 
-TODO continue...
+If you are willing to accept the inevitable vendor lock-in implied with serverless, serverless is an excellent choice
+for most contemporary applications, systems and products since they 
+
+* tend to change fast 
+* become obsolete quicker than expected 
+* need to adapt fast to constantly moving expectations of customers and stakeholders 
+
+> Time-to-market rules these days!
 
 ### Mobile first products
 
@@ -125,7 +130,8 @@ latencies.
 
 ### Endpoints for standardized protocols
 
-Systems providing endpoints for standardized protocols (like e-mobility ecosystems)
+Systems providing endpoints for standardized protocols (like e-mobility ecosystems) are an excellent candidate for
+serverless since they are heavily message-based and need to adapt quickly to increasing or decreasing workloads.
 
 ## When NOT to use serverless computing
 

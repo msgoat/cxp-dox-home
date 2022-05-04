@@ -6,6 +6,10 @@ AWS Lambda is an AWS service which provides a platform to develop, build and run
 
 ## Lambda speak
 
+Here are the most important terms you need to understand before you start with AWS Lambda. 
+
+![](img/aws_lambda_speak.png)
+
 ### Function
 
 A `function` is a resource on AWS Lambda you can invoke to run your code. An invocation is typically done by a
@@ -127,6 +131,7 @@ So if you want to forward asynchronously events from your function to another fu
 to your function.
 
 A destination may be:
+
 * an Amazon SQS queue
 * an Amazon SNS topic
 * an AWS Lambda function
@@ -134,3 +139,54 @@ A destination may be:
 
 For some endpoints you can configure special separate destinations when events can be processed successfully or the 
 processing fails (e.g. dead-letter-queues).
+
+## Moving Parts of a Lambda function
+
+Well, AWS Lambda is `serverless` but definitely *NOT* `infrastructure-less`: 
+
+![](img/aws_lambda_moving_parts.png)
+
+### Lambda VPC to host your function
+
+The execution environment for your functions is hosted in an AWS-managed VPC. 
+
+It consists of:
+
+* an `Application Loadbalancer` which accepts incoming invokes of your functions
+* a `Front End Invoke` which forwards the invoke to an available instance of your function
+* a `Worker Manager` which manages sandboxes for your functions
+* a `Placement Service` which places sandboxes on a pool of workers to run your functions
+* a pool of `Worker`s hosting sandboxes to run your function in a secure and isolated way
+
+### API Gateway to expose your function endpoints as REST API
+
+An API Gateway manages your REST API with its various operations, 
+links the operations to the actual function implementing it and exposes the REST API to the function consumers
+via public URLs.
+
+The API gateway is capable of providing different versions of your REST API through different stages.
+Additionally, it can handle authentication based on OpenID Connect or SAML through AWS Cognito.  
+
+### CloudFormation to deploy your functions
+
+Most Lambda development tools (like CDK, SAML and Amplify) use CloudFormation to deploy your function to the 
+Lambda platform and to manage the routes to your functions in API Gateway.
+
+### S3 as storage for your ZIP-based deployment packages
+
+S3 is used during the deployment process of your function to store your ZIP-based deployment packages 
+and the CloudFormation templates required to run the actual deployment.
+Whenever Lambda needs to spin up a new instance of your function, the corresponding ZIP archive will be pulled from this
+particular S3 instance.
+
+### ECR as storage for your container-based deployment packages
+
+If you use container-based deployment packages, an additional instance of ECR is required to store the container images.
+Whenever Lambda needs to spin up a new instance of your function, the corresponding images will be pulled from this
+particular ECR instance.
+
+### CloudWatch & X-Ray to observe your functions
+
+CloudWatch will be used by Lambda to store the log events related to your function.
+Lambda will log each invocation of your function by default, but you may create new log events inside your function as well.
+Additionally, AWS X-Ray may be used to trace invocations of your functions.

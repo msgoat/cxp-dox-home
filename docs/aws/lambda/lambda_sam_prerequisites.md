@@ -8,8 +8,6 @@ SAM will create a managed S3 bucket to store all SAM templates. Since the naming
 the S3 bucket is not very comprehensible, creating a well-named S3 bucket upfront is a good 
 idea.
 
-!!! info 
-
 ## Create an AWS ECR instance to store your containerized lambdas
 
 SAM will create a managed ECR instance to store all Docker images of your lambdas
