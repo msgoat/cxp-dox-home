@@ -164,7 +164,7 @@ nav:
            - SAM Prerequisites: aws/lambda/lambda_sam_prerequisites.md
            - Anatomy of a SAM project: aws/lambda/lambda_sam_project_anatomy.md
            - AWS Lambda Use Cases:
-               - Simple REST request processing: aws/lambda/lambda_use_case_simple_rest_processing.md
+               - Your first function Hello World: aws/lambda/lambda_use_case_hello_world.md
                - Complex REST request processing: aws/lambda/lambda_use_case_complex_rest_processing.md
 #           - Deep Dive into AWS Lambda:
 #               - Planes of AWS Lambda: aws/lambda/lambda_deep_dive_planes.md
