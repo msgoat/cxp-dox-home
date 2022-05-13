@@ -165,7 +165,8 @@ nav:
            - Anatomy of a SAM project: aws/lambda/lambda_sam_project_anatomy.md
            - AWS Lambda Use Cases:
                - Your first function Hello World: aws/lambda/lambda_use_case_hello_world.md
-               - Complex REST request processing: aws/lambda/lambda_use_case_complex_rest_processing.md
+               - Securing functions with token-based security: aws/lambda/lambda_use_case_security.md
+               - Calling downstream function synchronously: aws/lambda/lambda_use_case_synchronous_invoke.md
 #           - Deep Dive into AWS Lambda:
 #               - Planes of AWS Lambda: aws/lambda/lambda_deep_dive_planes.md
 #               - Synchronous invoke: aws/lambda/lambda_deep_dive_synchronous_invoke.md
