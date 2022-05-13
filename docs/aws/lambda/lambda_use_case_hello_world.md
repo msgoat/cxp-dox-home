@@ -43,7 +43,7 @@ which will result in issues when deploying your first function.
 3. Replace `!GetAtt HelloWorldFunction.Arn` with `!GetAtt ${SamProjectName}Function.Arn` in YAML element
    `Outputs.HelloWorldFunction.Value` (which should be on line 43)
 4. Replace `!GetAtt HelloWorldFunctionRole.Arn` with `!GetAtt ${SamProjectName}FunctionRole.Arn` in YAML element
-   `Outputs.HelloWorldFunction.Value` (which should be on line 43)
+   `Outputs.HelloWorldFunction.Value` (which should be on line 46)
 
 ## Step 4: Add a SAM configuration file to your project
 
