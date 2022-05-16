@@ -160,7 +160,8 @@ nav:
       - Serverless Applications: serverless/serverless_applications.md
       - Serverless with AWS Lambda:
            - Introducing AWS Lambda: aws/lambda/lambda_intro.md
-           - Getting started with AWS Lambda: aws/lambda/lambda_get_started.md
+           - Routing traffic to your functions: aws/lambda/lambda_routing_traffic.md
+           - Getting started with AWS SAM: aws/lambda/lambda_get_started.md
            - SAM Prerequisites: aws/lambda/lambda_sam_prerequisites.md
            - Anatomy of a SAM project: aws/lambda/lambda_sam_project_anatomy.md
            - AWS Lambda Use Cases:
