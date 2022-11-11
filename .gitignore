@@ -47,5 +47,8 @@ hs_err_pid*
 **/target/
 **/.flattened-pom.xml
 
+# diagram.net
+**/*.drawio.bkp
+
 # mkdocs
 site/
