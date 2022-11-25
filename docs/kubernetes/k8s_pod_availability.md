@@ -81,9 +81,11 @@ a particular algorithm (see first reference below for details).
  
 @see [HorizontalPodAutoscaler](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/)
 
-@see [HorizontalPodAutoscaler Manifest Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#horizontalpodautoscaler-v2beta1-autoscaling)
+@see [HorizontalPodAutoscaler Manifest Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#horizontalpodautoscaler-v2-autoscaling)
 
 __Example: HorizontalPodAutoscaler manifest__
+
+> @TODO: upgrade example to v2!
 
 This manifest file creates a HPA resource:
 
@@ -138,9 +140,11 @@ but by some expected or unexpected event concerning the platform your applicatio
     
 @see [Disruptions](https://kubernetes.io/docs/concepts/workloads/pods/disruptions/)
 
-@see [PodDisruptionBudget Manifest Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#poddisruptionbudget-v1beta1-policy)
+@see [PodDisruptionBudget Manifest Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#poddisruptionbudget-v1-policy)
 
 __Example: PodDisruptionBudget manifest__
+
+> @TODO: upgrade example to v1!
 
 ```yaml
 apiVersion: policy/v1beta1
@@ -185,7 +189,7 @@ This affinity language allows you to spread your pods across the cluster's worke
 
 @see [Assigning Pods to Nodes](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/)
 
-@see [Affinity PodSpec Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#affinity-v1-core)
+@see [Affinity PodSpec Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#affinity-v1-core)
 
 Possible rules are:
 
@@ -213,7 +217,7 @@ Topology spread constraints are defined within a [pod](./k8s_basic_objects.md#po
 
 @see [Pod Topology Spread Constraints](https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/)
 
-@see [TopologySpreadConstraint PodSpec Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#topologyspreadconstraint-v1-core)
+@see [TopologySpreadConstraint PodSpec Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#topologyspreadconstraint-v1-core)
   
 
 

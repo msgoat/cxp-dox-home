@@ -20,9 +20,9 @@ Some of these security context setting can be defined on pod level, some on cont
 
 @see [Configure a Security Context for a Pod or Container](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/)
 
-@see [PodSecurityContext Fragment Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#podsecuritycontext-v1-core)
+@see [PodSecurityContext Fragment Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#podsecuritycontext-v1-core)
 
-@see [SecurityContext Fragment Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#securitycontext-v1-core)
+@see [SecurityContext Fragment Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#securitycontext-v1-core)
 
 __Example: Deployment Manifest with Pod Security Context__
 
@@ -92,4 +92,4 @@ This authorization is granted through a role which is attached to the service ac
 
 @see [Pod Security Policies](https://kubernetes.io/docs/concepts/policy/pod-security-policy/)
 
-@see [PodSecurityPolicy Manifest Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#podsecuritypolicy-v1beta1-policy)
+@see [PodSecurityPolicy Manifest Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#podsecuritypolicy-v1beta1-policy)

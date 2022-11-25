@@ -29,28 +29,28 @@ of this default service account.
 
 @see [Configure Service Accounts for Pods](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/)
 
-@see [ServiceAccount Manifest Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#serviceaccount-v1-core)
+@see [ServiceAccount Manifest Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#serviceaccount-v1-core)
 
 ## Role
 
 A `role` defines a set of policies for a specific namespace.
 
-@see [Role Manifest Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#role-v1-rbac-authorization-k8s-io)
+@see [Role Manifest Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#role-v1-rbac-authorization-k8s-io)
 
 ## ClusterRole
 
 A `cluster role` defines a set of policies for Kubernetes cluster.
 
-@see [ClusterRole Manifest Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#clusterrole-v1-rbac-authorization-k8s-io)
+@see [ClusterRole Manifest Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#clusterrole-v1-rbac-authorization-k8s-io)
 
 ## RoleBinding
 
 A `role binding` attaches a specific [role](#role) to a specific subject like a [service account](#serviceaccount).
 
-@see [RoleBinding Manifest Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#rolebinding-v1-rbac-authorization-k8s-io)
+@see [RoleBinding Manifest Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#rolebinding-v1-rbac-authorization-k8s-io)
 
 ## ClusterRoleBinding
 
 A `cluster role binding` attaches a specific [cluster role](#clusterrole) to a specific subject like a [service account](#serviceaccount).
 
-@see [ClusterRoleBinding Manifest Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#clusterrolebinding-v1-rbac-authorization-k8s-io)
+@see [ClusterRoleBinding Manifest Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#clusterrolebinding-v1-rbac-authorization-k8s-io)

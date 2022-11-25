@@ -50,7 +50,7 @@ A job may span a single `pod` or a group of `pods`, which may perform the batch 
  
 @see [Jobs](https://kubernetes.io/docs/concepts/workloads/controllers/job/)
 
-@see [Job Manifest Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#job-v1-batch)
+@see [Job Manifest Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#job-v1-batch)
 
 ## CronJobs
 
@@ -60,4 +60,4 @@ Cronjobs are useful for performing periodic and recurring tasks, like database b
 
 @see [CronJob](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/)
 
-@see [CronJob Manifest Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#cronjob-v1beta1-batch)
+@see [CronJob Manifest Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#cronjob-v1-batch)

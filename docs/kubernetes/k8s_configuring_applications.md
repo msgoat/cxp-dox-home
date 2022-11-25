@@ -74,7 +74,7 @@ Configuration data managed as config maps may be consumed by an application:
 
 @see [Configure a Pod to Use a ConfigMap](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/)
 
-@see [ConfigMap Manifest Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#configmap-v1-core)
+@see [ConfigMap Manifest Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#configmap-v1-core)
 
 ## Secret
 
@@ -94,4 +94,4 @@ Kubernetes supports encryption of data contained in secrets at two levels:
 
 @see [Distribute Credentials Securely Using Secrets](https://kubernetes.io/docs/tasks/inject-data-application/distribute-credentials-secure/)
 
-@see [Secret Manifest Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#secret-v1-core)
+@see [Secret Manifest Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#secret-v1-core)

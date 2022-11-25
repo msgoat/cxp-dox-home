@@ -25,6 +25,7 @@ it with your colleagues. You can pull an existing Docker image from a central Do
 
 A Docker image is identified by its unique identifier provided by Docker or its more human friendly fully qualified 
 image name which consists of:
+
 * a [Docker repository](#docker-repository) name
 * a Docker image name
 * a [Docker image tag](#docker-tag)

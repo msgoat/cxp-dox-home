@@ -24,7 +24,7 @@ A pod must contain at least one [container](#container).
 
 @see [Pods](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/)
 
-@see [PodTemplateSpec Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#podtemplatespec-v1-core)
+@see [PodTemplateSpec Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#podtemplatespec-v1-core)
 
 ### Container
 
@@ -34,7 +34,7 @@ backed by [persistent volume claims](#persistentvolumeclaim).
 
 @see [The Distributed System ToolKit: Patterns for Composite Containers](https://kubernetes.io/blog/2015/06/the-distributed-system-toolkit-patterns/) 
 
-@see [Container Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#container-v1-core)
+@see [Container Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#container-v1-core)
 
 ### Deployment
 
@@ -43,7 +43,7 @@ In most cases, deployments are used to install, update and uninstall *stateless*
 
 @see [Deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)
 
-@see [Deployment Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#deployment-v1-apps)
+@see [Deployment Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#deployment-v1-apps)
 
 ### ReplicaSet
 
@@ -76,7 +76,7 @@ The preferred way to expose a service externally is using a ClusterIP service pl
        
 @see [Service](https://kubernetes.io/docs/concepts/services-networking/service/)
 
-@see [Service Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#service-v1-core)
+@see [Service Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#service-v1-core)
 
 ### Ingress
 
@@ -95,7 +95,7 @@ Ingresses support host-based or path-based routing, path manipulation, redirects
     
 @see [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)
 
-@see [Ingress Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#ingress-v1beta1-networking-k8s-io)
+@see [Ingress Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#ingress-v1-networking-k8s-io)
 
 ### NetworkPolicy
 
@@ -118,7 +118,7 @@ Network policies can define either ingress (inbound traffic) and/or egress (outb
      
 @see [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
 
-@see [NetworkPolicy Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#networkpolicy-v1-networking-k8s-io)
+@see [NetworkPolicy Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#networkpolicy-v1-networking-k8s-io)
 
 @see [Network Policy Recipies](https://github.com/ahmetb/kubernetes-network-policy-recipes)
 
@@ -189,7 +189,7 @@ Application groups representing system tool stacks for monitoring, logging and t
     
 @see [Namespaces](https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/)
 
-@see [Namespace Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#namespace-v1-core)
+@see [Namespace Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#namespace-v1-core)
 
 __Example: Namespace manifest__
 
@@ -229,7 +229,7 @@ Thus, stateful sets are the preferred way install, update and uninstall *statefu
 
 @see [StatefulSets](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)
 
-@see [StatefulSet Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#statefulset-v1-apps)
+@see [StatefulSet Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#statefulset-v1-apps)
 
 ### PersistentVolumeClaim
 
@@ -245,7 +245,7 @@ has been removed. Any deletion of a persistent volume claim automatically releas
 
 @see [Persistent Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)
 
-@see [PersistentVolumeClaim Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.20/#persistentvolumeclaim-v1-core)
+@see [PersistentVolumeClaim Reference](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.24/#persistentvolumeclaim-v1-core)
 
 ### PersistentVolume
 
