@@ -123,7 +123,73 @@ To get more information about all contexts, you can run:
 ```shell
 kubectl config view
 ```
- 
+
+## Special case: Azure AKS
+
+### Prerequisites
+
+* You need a local installation of the Azure CLI
+* You need access to the Azure subscription containing the Azure AKS cluster
+* You need access to the Azure AKS cluster
+
+### Getting the kubeconfig file for an Azure AKS cluster
+
+Run the following command in a console:
+
+````shell
+az aks get-credentials -g rg-westeu-cxppltf-dev-stage -n aks-westeu-cxppltf-dev-cxp2022 -f aks-westeu-cxppltf-dev-cxp2022.yaml
+````
+
+File `aks-westeu-cxppltf-dev-cxp2022.yaml` will contain the kubeconfig configuration of the Azure AKS cluster `aks-westeu-cxppltf-dev-cxp2022`.
+
+Add this file to the `KUBECONFIG` environment variable of your local machine as mentioned above.
+
+### Setting up Azure AKS login on your local machine
+
+The managed Kubernetes service on Azure called Azure AKS uses a different authentication process like a regular Kubernetes
+cluster: Rather than specifying a client certificate / client secret pair, Azure AKS kubeconfig files refer to an Azure specific authentication tool called `kubelogin`:
+
+```yaml
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: [_redacted_]
+    server: https://aks-westeu-cxppltf-dev-cxp2022-fa7d78f7.hcp.westeurope.azmk8s.io:443
+  name: aks-westeu-cxppltf-dev-cxp2022
+contexts:
+- context:
+    cluster: aks-westeu-cxppltf-dev-cxp2022
+    user: clusterUser_rg-westeu-cxppltf-dev-stage_aks-westeu-cxppltf-dev-cxp2022
+  name: aks-westeu-cxppltf-dev-cxp2022
+current-context: aks-westeu-cxppltf-dev-cxp2022
+kind: Config
+preferences: {}
+users:
+- name: clusterUser_rg-westeu-cxppltf-dev-stage_aks-westeu-cxppltf-dev-cxp2022
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      args:
+      - get-token
+      - --environment
+      - AzurePublicCloud
+      - --server-id
+      - [_redacted_]
+      - --client-id
+      - [_redacted_]
+      - --tenant-id
+      - [_redacted_]
+      - --login
+      - devicecode
+      command: kubelogin
+      env: null
+      provideClusterInfo: false
+```
+
+Download the kubelogin package from [https://github.com/Azure/kubelogin/releases](https://github.com/Azure/kubelogin/releases) and unzip `kubelogin[.exe]` to a folder in your PATH.
+
+Now whenever you login to Azure AKS for the first time, a browser window will open and you will need to login to the Azure AKS service first.
+
 ## Special case: AWS EKS
 
 The managed Kubernetes service on AWS called AWS EKS uses a different authentication process like a regular Kubernetes
