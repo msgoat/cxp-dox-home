@@ -136,12 +136,18 @@ Rich services as on-demand software represent the highest level of cloud service
 * Nothing to develop on the customer side
 * No operations or administration costs on the customer side
 
+!!! note "Highest potential for business growth"
+    The SaaS service category offers the highest potential for business growth if you want to become a player
+    on the public cloud market. You don't have to become a SaaS solution provider necessarily: even the skills how-to
+    turn existing products into SaaS offerings will boost your future business!
+
 __Relevant products:__
 
 * SAP
 * Oracle
 * Salesforce
 * Microsoft 365
+* [msg Marketplace](https://www.msg-marketplace.com/)
 
 ## Conclusions
 
@@ -163,3 +169,14 @@ use the provider-specific Kubernetes services like AWS EKS or Azure AKS.
 
 Since to this day, all our serverless projects are hosted on AWS, we need to get to know __AWS Lamdba__ properly
 before turning to __Azure Functions__.
+
+### We build up SaaS-ification skills
+
+!!! info "SaaS-ification explained"
+    The term `SaaS-ification` refers to the process of turning a product into a SaaS solution published via 
+    a SaaS marketplace.
+
+Building SaaS-capable products or beeing able to turn existing cloud products into SaaS solutions 
+is one of the primary objectives of the `msg Cloud Strategy`. Since the `Branche Automotive & Manufacturing` is 
+not a product provider per se, we nevertheless want to help our customers to build and publish SaaS solutions. 
+Thus, we invest a lot into build SaaS-ification skills in 2023.
