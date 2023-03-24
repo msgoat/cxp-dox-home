@@ -98,7 +98,7 @@ nav:
       - AWS Users:
           - User Account Basics: aws/iam/aws_users.md
           - Setting up a Console User Account: aws/iam/aws_console_user_setup.md
-          - Setting up a Programmatic User Account: aws/iam/aws_programmatic_user_setup.md
+          - Setting up a Programmatic User Account: aws/iam/aws_programmatic_user_setup_v2.md
       - AWS Virtual Private Cloud (VPC):
           - VPC Basics: aws/vpc/vpc_basics.md
           - VPC Reference Blueprint: aws/vpc/vpc_blueprint.md
@@ -144,6 +144,7 @@ nav:
               - VNet-to-VNet with VNet Peering: azure/vnet/az_vnet_peering.md
               - Point-to-Site/Site-to-Site with VPN Gateways: azure/vnet/az_vpn_gateway.md
               - Site-to-Site with ExpressRoute: azure/vnet/az_vpn_express_route.md
+              - Site-to-Site with Hub/Spoke: azure/vnet/az_vpn_hub_spoke_s2s.md
       - Azure Virtual Machines (VM):
           - VM Basics: azure/vm/vm_basics.md
       - Azure DNS:
