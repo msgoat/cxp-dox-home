@@ -2,6 +2,12 @@
 
 ## Azure DNS Zones
 
+Azure offers public DNS zones and private DNS zones.
+
+Private DNS zones must be explicitly linked to a VNet in order to make resolution of private DNS names work from with the VNet.
+
+![](img/az_vnet_dns.png)
+
 @see [Overview of DNS zones and records](https://docs.microsoft.com/en-us/azure/dns/dns-zones-records)
 
 @see [Terraform azurerm_dns_zone](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/dns_zone)
