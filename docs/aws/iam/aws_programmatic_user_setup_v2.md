@@ -145,6 +145,80 @@ __AWS_PROFILE__ to the name of the profile you would like to use.
 SETX AWS_PROFILE msgcxp
 ```
 
+## Special case: HOW-TO setup a programmatic user with enforced MFA
+
+When you have MFA enforced on your IAM user (which should always be the default),
+you will notice that any access using your access key is denied by AWS.
+
+This is actually the expected behaviour since MFA is applied to your programmatic access as well and you did not
+send any MFA code. 
+
+In order to be able to access AWS you'll need to walk through the following steps:
+
+### Step 1: Remember the ARN of your configured MFA device
+
+Open your user in IAM and switch to the `Security credentials` tab.
+Remember the ARN shown in the `identifier` column in the `Multi-factor authentication (MFA)` panel:
+
+![](img/aws_accesskey_mfa_0.png)
+
+### Step 2: Get a session token from AWS STS
+
+Make sure you have access to your MFA device.
+Open a console / terminal window.
+Make sure you are using the profile of your programmatic user (here: msgcxp)
+Run the following command:
+
+```shell
+aws sts get-session-token --serial-number arn:aws:iam::*************:mfa/miket92 --token-code ******
+```
+You'll need to add the following command line arguments:
+
+* `serial-number` specifies the ARN of your MFA device.
+* `token-code` is an MFA code as displayed on your MFA device. 
+* `duration-seconds` optionally specify the expiration time of the session token (default: 12 hours)
+
+The response from STS should look like this:
+
+```json
+{
+    "Credentials": {
+        "AccessKeyId": "ASI**************FCS",
+        "SecretAccessKey": "k5y**********************************yxa",
+        "SessionToken": "Fwo***[..]***G9z",
+        "Expiration": "2023-02-17T21:20:11+00:00"
+    }
+}
+```
+
+### Step 3: Add a new profile section to your credentials file
+
+Open the `credentials` in the `.aws` folder in your user home directory.
+Add a new section to the file:
+
+```text
+[msgcxp-sts]
+aws_access_key_id = ASI**************FCS
+aws_secret_access_key = k5y**********************************yxa
+aws_session_token = Fwo***[..]***G9z
+```
+
+The profile name enclosed in square brackets should be the name of the AWS profile you've just used to obtain the session token plus suffix `-sts`.
+
+`aws_access_key_id` is set to the value of attribute AccessKeyId from the STS response.
+
+`aws_secret_access_key` is set to the value of attribute SecretAccessKey from the STS response.
+
+`aws_session_token` is set to the value of attribute SessionToken from the STS response.
+
+> Attention: Remember to remove the enclosing double-quotes from the values you copied from the STS response!!!
+
+### Step 4: Check your results
+
+Open a console / terminal window. Switch to the new AWS profile you've just created. Enter any `aws` command which should complete
+successful now without any `access denied` messages. If you still get `access denied` message you probably are not permitted
+to access this AWS service!
+
 ## References
 
 [Configuring the AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html) gives you more 
