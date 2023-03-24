@@ -228,6 +228,6 @@ Then this access token is used to actually authenticate on a specific EKS cluste
 Therefore, the following prerequisites must be met when dealing with AWS EKS clusters:
 
 * you need an AWS API user with an access key/secret key pair which is authorized to access this particular EKS cluster
-* you need to setup this AWS API user on your local machine (see: [Setting up a Programmatic User Account](../../aws/iam/aws_programmatic_user_setup.md))
+* you need to setup this AWS API user on your local machine (see: [Setting up a Programmatic User Account](../../aws/iam/aws_programmatic_user_setup_v2.md))
 * you need to switch to the AWS profile referring to this particular AWS API user (if you are using more than one AWS API user)
 * you need to install the AWS command line interface (see: [Installing the AWS CLI version 2 on Windows](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-windows.html)) and the `aws-iam-authenticator` on your local machine (see: [Installing aws-iam-authenticator](https://docs.aws.amazon.com/eks/latest/userguide/install-aws-iam-authenticator.html))
