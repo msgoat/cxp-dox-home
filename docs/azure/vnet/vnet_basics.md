@@ -35,6 +35,8 @@ Although a subnet may have multiple address prefixes (CIDR blocks), it's always 
 distribute your VNets address space among your subnets, before you actually create them.
 Subnets must have distinct non-overlapping address prefixes.
 
+![](img/az_vnet_subnets.png)
+
 @see [Virtual Network documentation](https://docs.microsoft.com/en-us/azure/virtual-network/)
 
 @see [Terraform azurerm_subnet](https://www.terraform.io/docs/providers/azurerm/r/subnet.html),
@@ -67,6 +69,8 @@ The internet-bound traffic of any resource within the private subnet is automati
 which having to add an explicit route to the subnets route table.
 
 Each NAT gateway needs either a [public IP](#public-ip) or a [public IP prefix](#public-ip-prefix) to be able to translate private IP addresses into public ones.  
+
+![](img/az_vnet_nat_gateway.png)
 
 @see [Designing virtual networks with NAT gateway resources](https://docs.microsoft.com/en-us/azure/virtual-network/nat-gateway-resource)
 
@@ -116,7 +120,9 @@ The backend pool instance can be [virtual machine](../vm/vm_basics.md#virtual-ma
 or instances in a [virtual machine scale set](../vm/vm_basics.md#virtual-machine-scale-set).
 
 !!! info
-   An Azure load balancer resembles an AWS Network Load Balancer.
+    An Azure load balancer resembles an AWS Network Load Balancer.
+
+![](img/az_vnet_load_balancer.png)
    
 @see [Load Balancer documentation](https://docs.microsoft.com/en-us/azure/load-balancer/)
 
@@ -127,7 +133,7 @@ or instances in a [virtual machine scale set](../vm/vm_basics.md#virtual-machine
 An Azure `application gateway` is a Level-7 load balancer which distributes inbound web traffic
 to your web applications.
 
-![](img/figure1-720.png)
+![](img/az_vnet_application_gateway.png)
 
 An application gateway includes the following features:
 * Host-based or path-based routing
@@ -137,8 +143,25 @@ An application gateway includes the following features:
 * ...
  
 !!! info
-   An Azure Application Gateways can be compared to an AWS Application Load Balancer.
+    An Azure Application Gateways can be compared to an AWS Application Load Balancer.
 
 @see [Azure Application Gateway documentation](https://docs.microsoft.com/en-us/azure/application-gateway/)
 
 @see [Terraform azurerm_application_gateway](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/application_gateway)
+
+## Private Endpoints
+
+Private endpoints allow you the keep the traffic between the resources running inside your VNet and the Azure services running outside your VNet private.
+
+Private endpoints should be kept in a dedicated private subnet of your VNet. Each private endpoint pulls a private IP address from the address space of this particular subnet.
+Since you do not want to work with IP addresses when using private endpoints, you will need to attach private DNS zones to your VNet.
+These private DNS zones hold the private DNS records mapping private DNS names of Azure services to private IPs of the private endpoints.
+
+!!! info
+    Unfortunately Azure uses different DNS domains for each Azure service. 
+    Thus, you will need multiple private DNS zones hosting the private DNS records.
+
+![](img/az_vnet_private_endpoints.png)
+
+@see [Azure Private Link documentation](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview)
+
