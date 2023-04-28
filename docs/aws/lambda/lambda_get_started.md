@@ -3,8 +3,8 @@
 ## Prerequisites
 
 * You will need access to an AWS account.
-* The [AWS CLI]() must be installed on your local machine.
-* The [AWS SAM CLI]() must be installed on your local machine.
+* The [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) must be installed on your local machine.
+* The [AWS SAM CLI](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-getting-started.html) must be installed on your local machine.
 * Installing the AWS Toolkit Plugin for your favourite IDE is highly recommended.
 
 ## AWS Serverless Application Model (AWS SAM)
