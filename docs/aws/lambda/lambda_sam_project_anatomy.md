@@ -111,20 +111,26 @@ Here are some rules for SAM configuration files:
 
 Supported deployment parameters are:
 
-| Parameter name            | Description                                                                                                                                               | Matches command line argument               |
-|---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|
-| `stack_name`              | Name of the underlying CloudFormation stack                                                                                                               | --stack-name                                |
-| `s3_bucket`               | Name of the S3 bucket to store CloudFormation templates and ZIP archives (when using ZIP-based deployment packages)                                       | --s3-bucket                                 |
-| `s3_prefix`               | Name prefix of all files stored in the S3 bucket mentioned above                                                                                          | --s3-prefix                                 |
-| `image_repository`        | URI of an ECR repo this command should upload the container images to                                                                                     | --image-repository                          |
-| `image_repositories`      | Maps a specific function to the name of an ECR repository containing the container deployment package                                                     | --image-repositories                        |
-| `region`                  | Name of the AWS region to deploy to                                                                                                                       | --region                                    | 
-| `capabilities`            | Defines a list of capabilities that the CloudFormation stack must have before it is actually executed (like permission to create new IAM users and roles) | --capabilities                              |
-| `signing_profiles`        | Code sign configuration parameters to sign uploaded deployment packages                                                                                   | --signing-profiles                          |
-| `confirm_changeset`       | Controls if changes to the underlying CloudFormation stack need to be approved before applying them                                                       | --confirm-changeset, --no-confirm-changeset |
-| `disable_rollback`        | Controls if the state of previously provisioned resources should be preserved when an operation fails                                                     | --disable-rollback, --no-disable-rollback   |
-| `parameter_overrides` | List of parameter overrides to be passed to the underlying CloudFormation templates           | --parameter-overrides                   |
-| `tags`                    | List of tags which are to be propagated to all created AWS resources                                                                                      | --tags                                      |
+| Parameter name          | Description                                                                                                                                               | Matches command line argument               |
+|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------|
+| `stack_name`            | Name of the underlying CloudFormation stack                                                                                                               | --stack-name                                |
+| `resolve_s3`            | Controls if S3 buckets should be resolved (i.e. prompted for) (`true`) or simply being taken from the configuration file (`false`)                        | --resolve-s3                         |
+| `s3_bucket`             | Name of the S3 bucket to store CloudFormation templates and ZIP archives (when using ZIP-based deployment packages)                                       | --s3-bucket                                 |
+| `s3_prefix`             | Name prefix of all files stored in the S3 bucket mentioned above                                                                                          | --s3-prefix                                 |
+| `resolve_image-repos` | Controls if ECR repos should be resolved (i.e. prompted for) (`true`) or simply being taken from the configuration file (`false`)                         | --resolve-s3                         |
+| `image_repository`      | URI of an ECR repo this command should upload the container images to                                                                                     | --image-repository                          |
+| `image_repositories`    | Maps a specific function to the name of an ECR repository containing the container deployment package                                                     | --image-repositories                        |
+| `region`                | Name of the AWS region to deploy to                                                                                                                       | --region                                    | 
+| `capabilities`          | Defines a list of capabilities that the CloudFormation stack must have before it is actually executed (like permission to create new IAM users and roles) | --capabilities                              |
+| `signing_profiles`      | Code sign configuration parameters to sign uploaded deployment packages                                                                                   | --signing-profiles                          |
+| `confirm_changeset`     | Controls if changes to the underlying CloudFormation stack need to be approved before applying them                                                       | --confirm-changeset, --no-confirm-changeset |
+| `disable_rollback`      | Controls if the state of previously provisioned resources should be preserved when an operation fails                                                     | --disable-rollback, --no-disable-rollback   |
+| `parameter_overrides`   | List of parameter overrides to be passed to the underlying CloudFormation templates                                                                       | --parameter-overrides                       |
+| `tags`                  | List of tags which are to be propagated to all created AWS resources                                                                                      | --tags                                      |
+
+!!! info "Configuration of ECR repos since SAM version 1.82.0" 
+    During my upgrade to the latest SAM version in 2023, the configuration of the ECR repo changed: the only way to make an
+    unguided deployment work, was to specify `resolve_image_repos = false` and a function-image-mapping with `image_repositories = ["$functionName=$ecrRepoUrl"]`.
 
 ### SAM template file
 
