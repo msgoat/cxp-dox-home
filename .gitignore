@@ -49,6 +49,7 @@ hs_err_pid*
 
 # diagram.net
 **/*.drawio.bkp
+**/*.drawio.dtmp
 
 # mkdocs
 site/
